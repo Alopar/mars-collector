@@ -1,0 +1,46 @@
+using UnityEngine;
+using UnityEngine.Events;
+using EntityState;
+
+#ROOTNAMESPACEBEGIN#
+    [SelectionBase]
+    public partial class #SCRIPTNAME# : EntityMonoBehavior
+    {
+        #region FIELDS INSPECTOR
+        #endregion
+
+        #region FIELDS PRIVATE
+        private MonoBehaviorTransmitter _transmitter;
+        #endregion
+
+        #region EVENTS
+        #endregion
+
+        #region UNITY CALLBACKS
+        private void Start()
+        {
+            _transmitter = gameObject.AddComponent<MonoBehaviorTransmitter>();
+            ChangeState(new Example#SCRIPTNAME#State());
+        }
+        #endregion
+    }
+
+    // need transfer in other file
+    public partial class #SCRIPTNAME#
+    {
+        public class Example#SCRIPTNAME#State : EntityState<#SCRIPTNAME#>
+        {
+            #region METHODS PUBLIC
+            public override void Enter(EntityMonoBehavior entity)
+            {
+                base.Enter(entity);
+            }
+
+            public override void Exit()
+            {   
+                #NOTRIM#
+            }
+            #endregion
+        }
+    }
+#ROOTNAMESPACEEND#
