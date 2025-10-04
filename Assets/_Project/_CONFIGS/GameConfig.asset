@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: GameConfig
   m_EditorClassIdentifier: Assembly-CSharp::GameApplication.Gameplay.Models.GameConfig
   ShipCapacity: 10
-  StartingWeapons: 50
-  StartingSupplies: 50
-  StartingPeople: 50
+  StartingWeapons: 3
+  StartingSupplies: 6
+  StartingPeople: 2
+  WeaponsPerPerson: 0.5
+  SuppliesPerPerson: 1
   TurnsToWin: 20
   EventsJson: {fileID: 4900000, guid: 7dc5cb6be6edab246a72bfcd18176271, type: 3}

@@ -5,8 +5,8 @@
       "title": "Начало колонизации",
       "description": "Колония стабильна. Базовое потребление ресурсов.",
       "resourceChanges": {
-        "weapons": -2,
-        "supplies": -3,
+        "weapons": -1,
+        "supplies": 0,
         "people": 0
       }
     },
@@ -15,9 +15,9 @@
       "title": "Рост населения",
       "description": "Население увеличивается, требуется больше припасов.",
       "resourceChanges": {
-        "weapons": -2,
-        "supplies": -5,
-        "people": 2
+        "weapons": 0,
+        "supplies": -1,
+        "people": 0
       }
     },
     {
@@ -25,8 +25,8 @@
       "title": "Нападение марсиан",
       "description": "Враждебные формы жизни атакуют! Повышенный расход оружия.",
       "resourceChanges": {
-        "weapons": -8,
-        "supplies": -3,
+        "weapons": 0,
+        "supplies": 0,
         "people": -1
       }
     },
@@ -35,9 +35,9 @@
       "title": "Мирный период",
       "description": "Спокойное время. Минимальные потери.",
       "resourceChanges": {
-        "weapons": -1,
-        "supplies": -2,
-        "people": 1
+        "weapons": 0,
+        "supplies": 0,
+        "people": -4
       }
     },
     {
@@ -45,9 +45,9 @@
       "title": "Эпидемия",
       "description": "Болезнь распространяется! Нужны припасы для лечения.",
       "resourceChanges": {
-        "weapons": -2,
-        "supplies": -7,
-        "people": -3
+        "weapons": -5,
+        "supplies": 0,
+        "people": 0
       }
     },
     {

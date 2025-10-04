@@ -126,7 +126,11 @@ namespace GameApplication.Gameplay.Managers
                 Debug.LogWarning("Нет события для применения!");
             }
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.3f);
+
+            MarsManager.Instance.ApplyPeopleConsumption(Config.WeaponsPerPerson, Config.SuppliesPerPerson);
+
+            yield return new WaitForSeconds(0.3f);
 
             if (!CurrentGameState.IsGameOver)
             {
@@ -152,6 +156,21 @@ namespace GameApplication.Gameplay.Managers
             if (nextEvent != null)
             {
                 var preview = nextEvent.GetResourceChanges();
+                
+                int currentPeople = MarsManager.Instance.ColonyState.People;
+                int weaponsConsumption = Mathf.RoundToInt(currentPeople * Config.WeaponsPerPerson);
+                int suppliesConsumption = Mathf.RoundToInt(currentPeople * Config.SuppliesPerPerson);
+                
+                if (preview.ContainsKey(ResourceType.Weapons))
+                    preview[ResourceType.Weapons] -= weaponsConsumption;
+                else
+                    preview[ResourceType.Weapons] = -weaponsConsumption;
+                
+                if (preview.ContainsKey(ResourceType.Supplies))
+                    preview[ResourceType.Supplies] -= suppliesConsumption;
+                else
+                    preview[ResourceType.Supplies] = -suppliesConsumption;
+                
                 MarsManager.Instance.SetPreview(preview);
             }
         }

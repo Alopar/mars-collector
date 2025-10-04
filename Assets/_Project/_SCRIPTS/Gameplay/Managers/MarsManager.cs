@@ -79,6 +79,17 @@ namespace GameApplication.Gameplay.Managers
             OnColonyStateChanged?.Invoke(ColonyState);
         }
 
+        public void ApplyPeopleConsumption(float weaponsPerPerson, float suppliesPerPerson)
+        {
+            ColonyState.ApplyPeopleConsumption(weaponsPerPerson, suppliesPerPerson);
+            OnColonyStateChanged?.Invoke(ColonyState);
+
+            if (ColonyState.IsGameOver())
+            {
+                OnGameOver?.Invoke(ColonyState.GetGameOverReason());
+            }
+        }
+
         public int GetResourceValue(ResourceType type)
         {
             return ColonyState.GetResource(type);

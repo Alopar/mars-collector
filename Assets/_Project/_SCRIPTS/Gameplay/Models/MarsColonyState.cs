@@ -61,6 +61,17 @@ namespace GameApplication.Gameplay.Models
             }
         }
 
+        public void ApplyPeopleConsumption(float weaponsPerPerson, float suppliesPerPerson)
+        {
+            int totalWeaponsConsumption = Mathf.RoundToInt(People * weaponsPerPerson);
+            int totalSuppliesConsumption = Mathf.RoundToInt(People * suppliesPerPerson);
+
+            ModifyResource(ResourceType.Weapons, -totalWeaponsConsumption);
+            ModifyResource(ResourceType.Supplies, -totalSuppliesConsumption);
+
+            UnityEngine.Debug.Log($"Потребление людьми ({People} чел): Оружие -{totalWeaponsConsumption}, Припасы -{totalSuppliesConsumption}");
+        }
+
         public bool IsGameOver()
         {
             return Weapons <= MinValue || Weapons >= MaxValue ||
