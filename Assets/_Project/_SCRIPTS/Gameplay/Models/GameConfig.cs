@@ -1,3 +1,4 @@
+using GameApplication.Gameplay.Models.Cargo;
 using UnityEngine;
 
 namespace GameApplication.Gameplay.Models
@@ -5,7 +6,12 @@ namespace GameApplication.Gameplay.Models
     [CreateAssetMenu(fileName = "GameConfig", menuName = "Mars Collector/Game Config")]
     public class GameConfig : ScriptableObject
     {
-        [Header("Ship Settings")]
+        [Header("Cargo Grid Settings")]
+        public int GridWidth = 5;
+        public int GridHeight = 4;
+        public CargoShapeDatabase CargoDatabase;
+        
+        [Header("Ship Settings (Legacy)")]
         public int ShipCapacity = 10;
 
         [Header("Mars Starting Values")]

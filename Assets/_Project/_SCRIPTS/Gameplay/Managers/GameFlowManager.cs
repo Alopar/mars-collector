@@ -71,6 +71,11 @@ namespace GameApplication.Gameplay.Managers
             ShipManager.Instance.Initialize(Config.ShipCapacity);
             MarsManager.Instance.Initialize(Config.StartingWeapons, Config.StartingSupplies, Config.StartingPeople);
             EventManager.Instance.LoadEvents(Config.EventsJson);
+            
+            if (CargoManager.Instance != null && Config.CargoDatabase != null)
+            {
+                CargoManager.Instance.Initialize(Config.GridWidth, Config.GridHeight, Config.CargoDatabase);
+            }
 
             ShipManager.Instance.OnShipLaunched += HandleShipLaunched;
             MarsManager.Instance.OnGameOver += HandleMarsGameOver;
@@ -91,6 +96,11 @@ namespace GameApplication.Gameplay.Managers
 
         private void HandleShipLaunched(ShipCargo cargo)
         {
+            if (CargoManager.Instance != null && CargoManager.Instance.HasAnyShapes())
+            {
+                cargo = CargoManager.Instance.ConvertToShipCargo();
+            }
+            
             StartCoroutine(ProcessTurnSequence(cargo));
         }
 
@@ -144,6 +154,12 @@ namespace GameApplication.Gameplay.Managers
                 }
 
                 ShipManager.Instance.ClearCargo();
+                
+                if (CargoManager.Instance != null)
+                {
+                    CargoManager.Instance.ClearCargo();
+                }
+                
                 SetPhase(GamePhase.Loading);
                 ShowNextTurnPreview();
             }
@@ -194,6 +210,11 @@ namespace GameApplication.Gameplay.Managers
             MarsManager.Instance.ResetColony(Config.StartingWeapons, Config.StartingSupplies, Config.StartingPeople);
             ShipManager.Instance.ClearCargo();
             EventManager.Instance.Reset();
+            
+            if (CargoManager.Instance != null)
+            {
+                CargoManager.Instance.ClearCargo();
+            }
             
             SetPhase(GamePhase.Loading);
             OnTurnChanged?.Invoke(0);

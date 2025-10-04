@@ -56,7 +56,10 @@ namespace GameApplication.Gameplay.Managers
 
         public void LaunchShip()
         {
-            if (CurrentCargo.GetTotalResources() == 0)
+            bool hasCargoShapes = CargoManager.Instance != null && CargoManager.Instance.HasAnyShapes();
+            bool hasLegacyCargo = CurrentCargo != null && CurrentCargo.GetTotalResources() > 0;
+            
+            if (!hasCargoShapes && !hasLegacyCargo)
             {
                 Debug.LogWarning("Cannot launch empty ship!");
                 return;
