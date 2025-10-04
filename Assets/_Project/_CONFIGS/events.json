@@ -1,0 +1,204 @@
+{
+  "events": [
+    {
+      "id": "turn_1",
+      "title": "Начало колонизации",
+      "description": "Колония стабильна. Базовое потребление ресурсов.",
+      "resourceChanges": {
+        "weapons": -2,
+        "supplies": -3,
+        "people": 0
+      }
+    },
+    {
+      "id": "turn_2",
+      "title": "Рост населения",
+      "description": "Население увеличивается, требуется больше припасов.",
+      "resourceChanges": {
+        "weapons": -2,
+        "supplies": -5,
+        "people": 2
+      }
+    },
+    {
+      "id": "turn_3",
+      "title": "Нападение марсиан",
+      "description": "Враждебные формы жизни атакуют! Повышенный расход оружия.",
+      "resourceChanges": {
+        "weapons": -8,
+        "supplies": -3,
+        "people": -1
+      }
+    },
+    {
+      "id": "turn_4",
+      "title": "Мирный период",
+      "description": "Спокойное время. Минимальные потери.",
+      "resourceChanges": {
+        "weapons": -1,
+        "supplies": -2,
+        "people": 1
+      }
+    },
+    {
+      "id": "turn_5",
+      "title": "Эпидемия",
+      "description": "Болезнь распространяется! Нужны припасы для лечения.",
+      "resourceChanges": {
+        "weapons": -2,
+        "supplies": -7,
+        "people": -3
+      }
+    },
+    {
+      "id": "turn_6",
+      "title": "Напряженность",
+      "description": "Внутренние конфликты. Нужно больше оружия для охраны.",
+      "resourceChanges": {
+        "weapons": -5,
+        "supplies": -4,
+        "people": 0
+      }
+    },
+    {
+      "id": "turn_7",
+      "title": "Стабилизация",
+      "description": "Ситуация нормализуется.",
+      "resourceChanges": {
+        "weapons": -2,
+        "supplies": -3,
+        "people": 1
+      }
+    },
+    {
+      "id": "turn_8",
+      "title": "Большая атака",
+      "description": "Массированное нападение! Критические потери!",
+      "resourceChanges": {
+        "weapons": -10,
+        "supplies": -5,
+        "people": -4
+      }
+    },
+    {
+      "id": "turn_9",
+      "title": "Прибытие ученых",
+      "description": "Дополнительная команда ученых прибывает на базу.",
+      "resourceChanges": {
+        "weapons": -2,
+        "supplies": -4,
+        "people": 3
+      }
+    },
+    {
+      "id": "turn_10",
+      "title": "Песчаная буря",
+      "description": "Сильная буря повреждает запасы.",
+      "resourceChanges": {
+        "weapons": -1,
+        "supplies": -6,
+        "people": 0
+      }
+    },
+    {
+      "id": "turn_11",
+      "title": "Успешная разведка",
+      "description": "Разведка обнаружила ресурсы. Население довольно.",
+      "resourceChanges": {
+        "weapons": -2,
+        "supplies": -2,
+        "people": 2
+      }
+    },
+    {
+      "id": "turn_12",
+      "title": "Техническая авария",
+      "description": "Система жизнеобеспечения нуждается в ремонте.",
+      "resourceChanges": {
+        "weapons": -2,
+        "supplies": -5,
+        "people": -2
+      }
+    },
+    {
+      "id": "turn_13",
+      "title": "Затишье",
+      "description": "Редкий спокойный период.",
+      "resourceChanges": {
+        "weapons": -1,
+        "supplies": -2,
+        "people": 0
+      }
+    },
+    {
+      "id": "turn_14",
+      "title": "Марсианская угроза",
+      "description": "Разведка сообщает о приближении враждебных существ.",
+      "resourceChanges": {
+        "weapons": -6,
+        "supplies": -3,
+        "people": -1
+      }
+    },
+    {
+      "id": "turn_15",
+      "title": "Расширение базы",
+      "description": "Успешное расширение колонии. Больше людей могут жить здесь.",
+      "resourceChanges": {
+        "weapons": -2,
+        "supplies": -4,
+        "people": 4
+      }
+    },
+    {
+      "id": "turn_16",
+      "title": "Дефицит ресурсов",
+      "description": "Критическая нехватка ресурсов. Режим экономии.",
+      "resourceChanges": {
+        "weapons": -3,
+        "supplies": -6,
+        "people": -2
+      }
+    },
+    {
+      "id": "turn_17",
+      "title": "Удачная охота",
+      "description": "Охотники вернулись с добычей.",
+      "resourceChanges": {
+        "weapons": -2,
+        "supplies": -1,
+        "people": 1
+      }
+    },
+    {
+      "id": "turn_18",
+      "title": "Нападение с двух сторон",
+      "description": "Колония под угрозой! Нужно много оружия!",
+      "resourceChanges": {
+        "weapons": -12,
+        "supplies": -4,
+        "people": -3
+      }
+    },
+    {
+      "id": "turn_19",
+      "title": "Предпоследний рывок",
+      "description": "Еще немного и мы выживем!",
+      "resourceChanges": {
+        "weapons": -3,
+        "supplies": -5,
+        "people": -1
+      }
+    },
+    {
+      "id": "turn_20",
+      "title": "Финальное испытание",
+      "description": "Последний ход! Держитесь!",
+      "resourceChanges": {
+        "weapons": -4,
+        "supplies": -4,
+        "people": -2
+      }
+    }
+  ]
+}

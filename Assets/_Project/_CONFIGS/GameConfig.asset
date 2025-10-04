@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7539790979646848b151eedb522bb9e, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: Assembly-CSharp::GameApplication.Gameplay.Models.GameConfig
+  ShipCapacity: 10
+  StartingWeapons: 50
+  StartingSupplies: 50
+  StartingPeople: 50
+  TurnsToWin: 20
+  EventsJson: {fileID: 4900000, guid: 7dc5cb6be6edab246a72bfcd18176271, type: 3}
