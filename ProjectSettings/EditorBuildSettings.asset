@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/_Project/_SCENES/Build/B00-Bootstrap.unity
     guid: 113cb207eb2a6784394a84b44b94c00b
   - enabled: 1
-    path: Assets/_Project/_SCENES/Build/Tutorial.unity
-    guid: 4d5e2e551697ecc4f8459c5ec3cfde35
+    path: Assets/_Project/_SCENES/Build/B01-Lobby.unity
+    guid: 28cb334a41d33fb46b04eb3b543fff00
   - enabled: 1
     path: Assets/_Project/_SCENES/Build/B02-Gameplay.unity
     guid: e95365234abcc55408c645c97ab37ed2

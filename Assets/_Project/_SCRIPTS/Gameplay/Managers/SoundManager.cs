@@ -1,11 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gameplay.Managers
+namespace GameApplication.Gameplay.Managers
 {
     public class SoundManager : MonoBehaviour
     {
-        #region FIELDS INSPECTOR
         [SerializeField] private AudioSource _musicSource;
         [SerializeField] private AudioSource _soundSource;
 
@@ -16,44 +15,42 @@ namespace Gameplay.Managers
         [Space(10)]
         [SerializeField] private AudioClip _sampleSound;
         [SerializeField, Range(0, 1)] private float _sampleDelay = 0.25f;
-        #endregion
 
-        #region FIELDS PRIVATE
-        private static SoundManager _instance;
         private float _sampleTimer;
-        #endregion
 
-        #region PROPERTIES
-        public static SoundManager Instance => _instance;
-        #endregion
+        public static SoundManager Instance { get; private set; }
 
-        #region UNITY CALLBACKS
         private void Awake()
         {
-            _instance = this;
+            if (Instance != null && Instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
 
         private void OnEnable()
         {
-            _musicSlider.onValueChanged.AddListener(OnMusicVolumeChanged);
-            _soundSlider.onValueChanged.AddListener(OnSoundVolumeChanged);
+            // _musicSlider.onValueChanged.AddListener(OnMusicVolumeChanged);
+            // _soundSlider.onValueChanged.AddListener(OnSoundVolumeChanged);
         }
 
         private void OnDisable()
         {
-            _musicSlider.onValueChanged.RemoveListener(OnMusicVolumeChanged);
-            _soundSlider.onValueChanged.RemoveListener(OnSoundVolumeChanged);
+            // _musicSlider.onValueChanged.RemoveListener(OnMusicVolumeChanged);
+            // _soundSlider.onValueChanged.RemoveListener(OnSoundVolumeChanged);
         }
 
         private void Start()
         {
-            _sampleTimer = _sampleDelay + Time.unscaledTime;
-            _musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 0.25f);
-            _soundSlider.value = PlayerPrefs.GetFloat("SoundVolume", 0.5f);
+            // _sampleTimer = _sampleDelay + Time.unscaledTime;
+            // _musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 0.25f);
+            // _soundSlider.value = PlayerPrefs.GetFloat("SoundVolume", 0.5f);
         }
-        #endregion
 
-        #region METHODS PRIVATE
         private void OnMusicVolumeChanged(float value)
         {
             PlayerPrefs.SetFloat("MusicVolume", value);
@@ -70,13 +67,11 @@ namespace Gameplay.Managers
             _sampleTimer = _sampleDelay + Time.unscaledTime;
             PlaySound(_sampleSound);
         }
-        #endregion
 
-        #region METHODS PUBLIC
         public void PlaySound(AudioClip clip)
         {
             _soundSource.PlayOneShot(clip);
         }
-        #endregion
+
     }
 }

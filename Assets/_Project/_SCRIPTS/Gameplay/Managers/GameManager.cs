@@ -4,20 +4,12 @@ using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Gameplay.Managers
+namespace GameApplication.Gameplay.Managers
 {
     public class GameManager : MonoBehaviour
     {
-        #region FIELDS INSPECTOR
-        #endregion
+        public static GameManager Instance { get; private set; }
 
-        #region FIELDS PRIVATE
-        #endregion
-
-        #region PROPERTIES
-        #endregion
-        
-        #region METHODS PUBLIC
         [Button("⭐ START GAME ⭐")]
         public void StartGame()
         {
@@ -33,13 +25,13 @@ namespace Gameplay.Managers
         [Button("🎲 START MENU 🎲")]
         public void StartMenu()
         {
-            StartCoroutine(DelayCall(0.25f, () => { SceneManager.LoadScene(0); }));
+            StartCoroutine(DelayCall(0.25f, () => { SceneManager.LoadScene(1); }));
         }
 
         [Button("❔ SHOW TUTORIAL ❔")]
         public void ShowTutorial()
         {
-            StartCoroutine(DelayCall(0.25f, () => { SceneManager.LoadScene(1); }));
+            StartCoroutine(DelayCall(0.25f, () => { SceneManager.LoadScene(2); }));
         }
 
         [Button("💤 PAUSE GAME 💤")]
@@ -47,21 +39,25 @@ namespace Gameplay.Managers
         {
             Time.timeScale = Time.timeScale == 0 ? 1 : 0;
         }
-        #endregion
 
-        #region UNITY CALLBACKS
         private void Awake()
         {
+            if (Instance != null && Instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+
             Time.timeScale = 1.0f;
         }
-        #endregion
 
-        #region COROUTINES
         private IEnumerator DelayCall(float seconds, Action callback)
         {
             yield return new WaitForSecondsRealtime(seconds);
             callback?.Invoke();
         }
-        #endregion
     }
 }
