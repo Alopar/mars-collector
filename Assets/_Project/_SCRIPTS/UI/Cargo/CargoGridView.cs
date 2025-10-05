@@ -21,6 +21,7 @@ namespace GameApplication.UI.Cargo
         [Header("Colors")]
         public Color validPlacementColor = new Color(0, 1, 0, 0.5f);
         public Color invalidPlacementColor = new Color(1, 0, 0, 0.5f);
+        public Color hoverShapeColor = new Color(1f, 1f, 0f, 0.5f);
         
         private CargoSlotView[,] _slots;
         private CargoPlacementController _controller;
@@ -137,6 +138,27 @@ namespace GameApplication.UI.Cargo
                 if (slot != null)
                 {
                     slot.ClearHighlight();
+                }
+            }
+        }
+        
+        public void HighlightPlacedShape(PlacedShapeData placedShape)
+        {
+            HideGhostPreview();
+            
+            if (placedShape == null || placedShape.shape == null)
+                return;
+            
+            var positions = placedShape.shape.GetOccupiedPositions();
+            
+            foreach (var offset in positions)
+            {
+                int x = placedShape.position.x + offset.x;
+                int y = placedShape.position.y + offset.y;
+                
+                if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight)
+                {
+                    _slots[y, x].SetHighlight(hoverShapeColor);
                 }
             }
         }

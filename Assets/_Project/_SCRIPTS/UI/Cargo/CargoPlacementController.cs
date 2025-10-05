@@ -99,7 +99,14 @@ namespace GameApplication.UI.Cargo
         public void OnGridHover(int x, int y)
         {
             if (_selectedShape == null)
+            {
+                var placedShape = CargoManager.Instance.Grid.GetShapeAt(x, y);
+                if (placedShape != null && gridView != null)
+                {
+                    gridView.HighlightPlacedShape(placedShape);
+                }
                 return;
+            }
             
             _currentGridPos = new Vector2Int(x, y);
             UpdateGhostPreview();

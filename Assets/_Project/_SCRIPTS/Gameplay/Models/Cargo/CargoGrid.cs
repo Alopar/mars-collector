@@ -144,6 +144,18 @@ namespace GameApplication.Gameplay.Models.Cargo
             return new List<PlacedShapeData>(_placedShapes);
         }
         
+        public PlacedShapeData GetShapeAt(int x, int y)
+        {
+            if (x < 0 || x >= Width || y < 0 || y >= Height)
+                return null;
+            
+            if (!_cells[y, x].isOccupied)
+                return null;
+            
+            int instanceId = _cells[y, x].shapeInstanceId;
+            return _placedShapes.Find(s => s.instanceId == instanceId);
+        }
+        
         public int GetTotalLoadedAmount()
         {
             var resources = CalculateLoadedResources();
