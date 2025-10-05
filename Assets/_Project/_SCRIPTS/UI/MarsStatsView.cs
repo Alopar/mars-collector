@@ -1,8 +1,9 @@
-using UnityEngine;
-using TMPro;
-using System.Collections.Generic;
 using GameApplication.Gameplay.Managers;
 using GameApplication.Gameplay.Models;
+using GameApplication.Utility;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
 
 namespace GameApplication.UI
 {
@@ -168,12 +169,12 @@ namespace GameApplication.UI
             {
                 if (type == ResourceType.Weapons)
                 {
-                    int consumption = Mathf.RoundToInt(totalPeopleAfterDelivery * GameFlowManager.Instance.Config.WeaponsPerPerson);
+                    int consumption = Mathf.RoundToInt(totalPeopleAfterDelivery * GameFlowManager.Instance.Config.GetWeaponsPerPerson());
                     expenses -= consumption;
                 }
                 else if (type == ResourceType.Supplies)
                 {
-                    int consumption = Mathf.RoundToInt(totalPeopleAfterDelivery * GameFlowManager.Instance.Config.SuppliesPerPerson);
+                    int consumption = Mathf.RoundToInt(totalPeopleAfterDelivery * GameFlowManager.Instance.Config.GetSuppliesPerPerson());
                     expenses -= consumption;
                 }
             }

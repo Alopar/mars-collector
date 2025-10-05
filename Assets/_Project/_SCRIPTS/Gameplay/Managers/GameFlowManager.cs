@@ -1,4 +1,5 @@
 using GameApplication.Gameplay.Models;
+using GameApplication.Utility;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -114,7 +115,7 @@ namespace GameApplication.Gameplay.Managers
             SetPhase(GamePhase.Processing);
 
             MarsManager.Instance.ApplyCargoDeliverySilent(cargo);
-            MarsManager.Instance.ApplyPeopleConsumptionSilent(Config.WeaponsPerPerson, Config.SuppliesPerPerson);
+            MarsManager.Instance.ApplyPeopleConsumptionSilent(Config.GetWeaponsPerPerson(), Config.GetSuppliesPerPerson());
             
             TurnEvent currentEvent = EventManager.Instance.GetNextEvent();
             if (currentEvent != null)

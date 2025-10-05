@@ -19,5 +19,5 @@ MonoBehaviour:
     1 \u043C\u0438\u0441\u0441\u0438\u044E"
   MinPeopleNeededToStart: 0
   ResourceRequirements:
-  - ResourceType: 0
-    MinAmount: 0
+    ResourceType: 0
+    MinAmount: 2

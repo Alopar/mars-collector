@@ -15,6 +15,8 @@ namespace GameApplication.Gameplay.Managers
         private int _currentMissionIndex = -1;
         private bool _missionIsActive = false;
 
+        public int CurrentMissionIndex => _currentMissionIndex;
+
         public static MissionsManager Instance { get; private set; }
 
         private void Awake()

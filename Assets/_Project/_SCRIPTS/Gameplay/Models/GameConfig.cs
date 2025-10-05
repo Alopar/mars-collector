@@ -20,11 +20,11 @@ namespace GameApplication.Gameplay.Models
         public int StartingPeople = 50;
 
         [Header("People Consumption")]
-        [Tooltip("Сколько оружия потребляет 1 человек за ход")]
-        public float WeaponsPerPerson = 0.1f;
+        [Tooltip("Сколько оружия потребляет 1 человек за ход. На каждую пройденную миссию")]
+        public float[] WeaponsPerPersonForMissionsComplete;
         
-        [Tooltip("Сколько припасов потребляет 1 человек за ход")]
-        public float SuppliesPerPerson = 0.2f;
+        [Tooltip("Сколько припасов потребляет 1 человек за ход. На каждую пройденную миссию")]
+        public float[] SuppliesPerPersonForMissionsComplete;
 
         [Header("Win Condition")]
         public int TurnsToWin = 20;
