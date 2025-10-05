@@ -612,8 +612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a3cf3ad7dafdea4889a26250236db4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameApplication.UI.Cargo.CargoGridView
-  gridWidth: 5
-  gridHeight: 4
   cellSize: 64
   cellSpacing: 2
   cellPrefab: {fileID: 2832167946529124108, guid: 1d03d36fa7ef5e84fb2962f58c6709aa, type: 3}
@@ -637,7 +635,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 64, y: 64}

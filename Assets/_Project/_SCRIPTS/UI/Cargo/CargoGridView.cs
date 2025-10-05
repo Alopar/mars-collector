@@ -10,10 +10,11 @@ namespace GameApplication.UI.Cargo
     public class CargoGridView : MonoBehaviour
     {
         [Header("Settings")]
-        public int gridWidth = 5;
-        public int gridHeight = 4;
         public float cellSize = 64f;
         public float cellSpacing = 2f;
+        
+        private int gridWidth;
+        private int gridHeight;
         
         [Header("Prefabs")]
         public GameObject cellPrefab;
@@ -25,17 +26,40 @@ namespace GameApplication.UI.Cargo
         
         private CargoSlotView[,] _slots;
         private CargoPlacementController _controller;
+        private bool _initialized = false;
         
         private void Start()
         {
+            TryInitialize();
+        }
+        
+        private void Update()
+        {
+            if (!_initialized)
+            {
+                TryInitialize();
+            }
+        }
+        
+        private void TryInitialize()
+        {
+            if (_initialized)
+                return;
+            
+            if (CargoManager.Instance == null || CargoManager.Instance.Grid == null)
+                return;
+            
+            gridWidth = CargoManager.Instance.Grid.Width;
+            gridHeight = CargoManager.Instance.Grid.Height;
+            
             GenerateGrid();
             
-            if (CargoManager.Instance != null)
-            {
-                CargoManager.Instance.OnShapePlaced += OnShapePlaced;
-                CargoManager.Instance.OnShapeRemoved += OnShapeRemoved;
-                CargoManager.Instance.OnCargoCleared += OnCargoCleared;
-            }
+            CargoManager.Instance.OnShapePlaced += OnShapePlaced;
+            CargoManager.Instance.OnShapeRemoved += OnShapeRemoved;
+            CargoManager.Instance.OnCargoCleared += OnCargoCleared;
+            
+            _initialized = true;
+            Debug.Log($"CargoGridView initialized with size {gridWidth}x{gridHeight}");
         }
         
         public void SetController(CargoPlacementController controller)
@@ -227,7 +251,7 @@ namespace GameApplication.UI.Cargo
         
         private void OnDestroy()
         {
-            if (CargoManager.Instance != null)
+            if (_initialized && CargoManager.Instance != null)
             {
                 CargoManager.Instance.OnShapePlaced -= OnShapePlaced;
                 CargoManager.Instance.OnShapeRemoved -= OnShapeRemoved;
