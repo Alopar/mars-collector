@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53cf887a61673fb4fb8a19bc9d932833, type: 3}
-  m_Name: Pistol
+  m_Name: Supplies.04
   m_EditorClassIdentifier: Assembly-CSharp::GameApplication.Gameplay.Models.Cargo.CargoShapeData
-  shapeName: "\u041F\u0438\u0441\u0442\u043E\u043B\u0435\u0442"
-  resourceType: 0
+  shapeName: Supplies.04
+  resourceType: 1
   icon: {fileID: 0}
   shapeWidth: 2
-  shapeHeight: 1
-  shapeFlat: 0100000001000000
-  resourceAmount: 1
+  shapeHeight: 2
+  shapeFlat: 01000000010000000000000001000000
+  resourceAmount: 3
   previewColor: {r: 0, g: 1, b: 0, a: 0.3}
