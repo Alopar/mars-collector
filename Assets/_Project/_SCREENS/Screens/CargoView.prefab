@@ -597,8 +597,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 400}
+  m_AnchoredPosition: {x: 0, y: 70}
+  m_SizeDelta: {x: 400, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3610003793933765157
 MonoBehaviour:
@@ -619,6 +619,7 @@ MonoBehaviour:
   cellPrefab: {fileID: 2832167946529124108, guid: 1d03d36fa7ef5e84fb2962f58c6709aa, type: 3}
   validPlacementColor: {r: 0, g: 1, b: 0, a: 0.5}
   invalidPlacementColor: {r: 1, g: 0, b: 0, a: 0.5}
+  hoverShapeColor: {r: 1, g: 1, b: 0, a: 0.5}
 --- !u!114 &6327297187568036793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -642,7 +643,7 @@ MonoBehaviour:
   m_CellSize: {x: 64, y: 64}
   m_Spacing: {x: 2, y: 2}
   m_Constraint: 1
-  m_ConstraintCount: 5
+  m_ConstraintCount: 4
 --- !u!1 &2489006518246460572
 GameObject:
   m_ObjectHideFlags: 0

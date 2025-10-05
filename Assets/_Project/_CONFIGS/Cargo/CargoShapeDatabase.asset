@@ -14,7 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameApplication.Gameplay.Models.Cargo.CargoShapeDatabase
   weaponShapes:
   - {fileID: 11400000, guid: 0dfd63a04f5848146b0fca252c55c32e, type: 2}
+  - {fileID: 11400000, guid: 65510fe4e22717d469d042563265bde2, type: 2}
+  - {fileID: 11400000, guid: c412d6a9f37022045aeb1f9059831070, type: 2}
   supplyShapes:
   - {fileID: 11400000, guid: ac733667c9f3efa47af792a4d6cc33f2, type: 2}
+  - {fileID: 11400000, guid: 1248c49804e151745978412bbbb1a2bc, type: 2}
   peopleShapes:
   - {fileID: 11400000, guid: 2d5e2564ee22a5a449f4bfc634b9ef50, type: 2}
+  - {fileID: 11400000, guid: 9f9756a2d6eea1c4db82ee5e89b176a4, type: 2}
+  - {fileID: 11400000, guid: 78a933232545cd3488c9dfeeddd81fb9, type: 2}
