@@ -1,204 +1,205 @@
 {
-  "events": [
-    {
-      "id": "turn_1",
-      "title": "Начало колонизации",
-      "description": "Колония стабильна. Базовое потребление ресурсов.",
-      "resourceChanges": {
-        "weapons": -1,
-        "supplies": 0,
-        "people": 0
-      }
-    },
-    {
-      "id": "turn_2",
-      "title": "Рост населения",
-      "description": "Население увеличивается, требуется больше припасов.",
-      "resourceChanges": {
-        "weapons": 0,
-        "supplies": -1,
-        "people": 0
-      }
-    },
-    {
-      "id": "turn_3",
-      "title": "Нападение марсиан",
-      "description": "Враждебные формы жизни атакуют! Повышенный расход оружия.",
-      "resourceChanges": {
-        "weapons": 0,
-        "supplies": 0,
-        "people": -1
-      }
-    },
-    {
-      "id": "turn_4",
-      "title": "Мирный период",
-      "description": "Спокойное время. Минимальные потери.",
-      "resourceChanges": {
-        "weapons": 0,
-        "supplies": 0,
-        "people": -4
-      }
-    },
-    {
-      "id": "turn_5",
-      "title": "Эпидемия",
-      "description": "Болезнь распространяется! Нужны припасы для лечения.",
-      "resourceChanges": {
-        "weapons": -5,
-        "supplies": 0,
-        "people": 0
-      }
-    },
-    {
-      "id": "turn_6",
-      "title": "Напряженность",
-      "description": "Внутренние конфликты. Нужно больше оружия для охраны.",
-      "resourceChanges": {
-        "weapons": -5,
-        "supplies": -4,
-        "people": 0
-      }
-    },
-    {
-      "id": "turn_7",
-      "title": "Стабилизация",
-      "description": "Ситуация нормализуется.",
-      "resourceChanges": {
-        "weapons": -2,
-        "supplies": -3,
-        "people": 1
-      }
-    },
-    {
-      "id": "turn_8",
-      "title": "Большая атака",
-      "description": "Массированное нападение! Критические потери!",
-      "resourceChanges": {
-        "weapons": -10,
-        "supplies": -5,
-        "people": -4
-      }
-    },
-    {
-      "id": "turn_9",
-      "title": "Прибытие ученых",
-      "description": "Дополнительная команда ученых прибывает на базу.",
-      "resourceChanges": {
-        "weapons": -2,
-        "supplies": -4,
-        "people": 3
-      }
-    },
-    {
-      "id": "turn_10",
-      "title": "Песчаная буря",
-      "description": "Сильная буря повреждает запасы.",
-      "resourceChanges": {
-        "weapons": -1,
-        "supplies": -6,
-        "people": 0
-      }
-    },
-    {
-      "id": "turn_11",
-      "title": "Успешная разведка",
-      "description": "Разведка обнаружила ресурсы. Население довольно.",
-      "resourceChanges": {
-        "weapons": -2,
-        "supplies": -2,
-        "people": 2
-      }
-    },
-    {
-      "id": "turn_12",
-      "title": "Техническая авария",
-      "description": "Система жизнеобеспечения нуждается в ремонте.",
-      "resourceChanges": {
-        "weapons": -2,
-        "supplies": -5,
-        "people": -2
-      }
-    },
-    {
-      "id": "turn_13",
-      "title": "Затишье",
-      "description": "Редкий спокойный период.",
-      "resourceChanges": {
-        "weapons": -1,
-        "supplies": -2,
-        "people": 0
-      }
-    },
-    {
-      "id": "turn_14",
-      "title": "Марсианская угроза",
-      "description": "Разведка сообщает о приближении враждебных существ.",
-      "resourceChanges": {
-        "weapons": -6,
-        "supplies": -3,
-        "people": -1
-      }
-    },
-    {
-      "id": "turn_15",
-      "title": "Расширение базы",
-      "description": "Успешное расширение колонии. Больше людей могут жить здесь.",
-      "resourceChanges": {
-        "weapons": -2,
-        "supplies": -4,
-        "people": 4
-      }
-    },
-    {
-      "id": "turn_16",
-      "title": "Дефицит ресурсов",
-      "description": "Критическая нехватка ресурсов. Режим экономии.",
-      "resourceChanges": {
-        "weapons": -3,
-        "supplies": -6,
-        "people": -2
-      }
-    },
-    {
-      "id": "turn_17",
-      "title": "Удачная охота",
-      "description": "Охотники вернулись с добычей.",
-      "resourceChanges": {
-        "weapons": -2,
-        "supplies": -1,
-        "people": 1
-      }
-    },
-    {
-      "id": "turn_18",
-      "title": "Нападение с двух сторон",
-      "description": "Колония под угрозой! Нужно много оружия!",
-      "resourceChanges": {
-        "weapons": -12,
-        "supplies": -4,
-        "people": -3
-      }
-    },
-    {
-      "id": "turn_19",
-      "title": "Предпоследний рывок",
-      "description": "Еще немного и мы выживем!",
-      "resourceChanges": {
-        "weapons": -3,
-        "supplies": -5,
-        "people": -1
-      }
-    },
-    {
-      "id": "turn_20",
-      "title": "Финальное испытание",
-      "description": "Последний ход! Держитесь!",
-      "resourceChanges": {
-        "weapons": -4,
-        "supplies": -4,
-        "people": -2
-      }
-    }
-  ]
+    "events": [
+        {
+            "id": "turn_1",
+            "title": "Начало колонизации",
+            "description": "Новости: \r\n Новая Колониальная политика привлекает все больше дотаций на Марс. \r\n Collector - самая массовая вакансия года. \r\n supplies + 4",
+            "resourceChanges": {
+                "weapons": 0,
+                "supplies": 4,
+                "people": 0
+            }
+        },
+        {
+            "id": "turn_2",
+            "title": "Движение в светлое будующее",
+            "description": "Новости: \r\n Все большее число компаний вкладываются в развитие Марса! \r\n Все мы движемся в светлое будущее человечества! \r\n supplies + 4",
+            "resourceChanges": {
+                "weapons": 0,
+                "supplies": 4,
+                "people": 0
+            }
+        },
+        {
+            "id": "turn_3",
+            "title": "Нападение марсиан",
+            "description": "Новости: \r\n Ученые расширяют свой контингент на марсе. \r\n Доктор Галилео: Внимание! ЭКСПЕРЕМЕНТ! \r\n people + 4",
+            "resourceChanges": {
+                "weapons": 0,
+                "supplies": 0,
+                "people": 4
+            }
+        },
+        {
+            "id": "turn_4",
+            "title": "Мирный период",
+            "description": "Новости: \r\n Космическая логистика процветает! \r\n Collector - новая денежная элита. \r\n supplies + 4",
+            "resourceChanges": {
+                "weapons": 0,
+                "supplies": 4,
+                "people": 0
+            }
+        },
+        {
+            "id": "turn_5",
+            "title": "Эпидемия",
+            "description": "Новости: \r\n Первые люди родившиеся на Марсе! \r\n Можно ли их назвать Марсианами если они рождены от Землян? \r\n people + 2",
+            "resourceChanges": {
+                "weapons": 0,
+                "supplies": 0,
+                "people": 2
+            }
+        },
+        {
+            "id": "turn_6",
+            "title": "Напряженность",
+            "description": "Новости: \r\n Люди обеспокоены случаями странных пропаж. \r\n Но кого остановит от путешествия пару неудачников, что потерялись? \r\n people -2",
+            "resourceChanges": {
+                "weapons": 0,
+                "supplies": 0,
+                "people": -2
+            }
+        },
+        {
+            "id": "turn_7",
+            "title": "Стабилизация",
+            "description": "Новости: \r\n Люди говорят, что видели странных существ. \r\n Правительство высылает оружие для спокойствия граждан. \r\n weapons + 4",
+            "resourceChanges": {
+                "weapons": 4,
+                "supplies": 0,
+                "people": 0
+            }
+        },
+        {
+            "id": "turn_8",
+            "title": "Большая атака",
+            "description": "Новости: \r\n Логово Bug было обнаружено неподалеку от серверного комплекса. \r\n Боевая группа направлена, потери минимальны. \r\n people -1",
+            "resourceChanges": {
+                "weapons": 0,
+                "supplies": 0,
+                "people": -1
+            }
+        },
+        {
+            "id": "turn_9",
+            "title": "Прибытие ученых",
+            "description": "Новости: \r\n Земляне узнавшие о новом развлечении на Марсе Массово устремились на красную планету. \r\n G. Hopper: Я устраняю один Bug, на его месте тут же появляется 2 новых. \r\n people + 4",
+            "resourceChanges": {
+                "weapons": 0,
+                "supplies": 0,
+                "people": 4
+            }
+        },
+        {
+            "id": "turn_10",
+            "title": "Песчаная буря",
+            "description": "Новости: \r\n Еще больше людей открывают для себя прелесть Марса! \r\n Не только государственные служащие, но и обычные туристы теперь могут к нам прилететь. \r\n people + 4",
+            "resourceChanges": {
+                "weapons": 0,
+                "supplies": 0,
+                "people": 4
+            }
+        },
+        {
+            "id": "turn_11",
+            "title": "Успешная разведка",
+            "description": "Новости: \r\n Крупные игроки продуктового рынка спешат заполнить прилавки новых магазинов Марса! \r\n Mars Cola - Marsian Red is the New Red! \r\n supplies + 10",
+            "resourceChanges": {
+                "weapons": 0,
+                "supplies": 10,
+                "people": 0
+            }
+        },
+        {
+            "id": "turn_12",
+            "title": "Техническая авария",
+            "description": "Новости: \r\n Небывалый бум рождаемости! \r\n В чем причина? Космическое путешествие или игры 18+? \r\n people + 10",
+            "resourceChanges": {
+                "weapons": 0,
+                "supplies": 0,
+                "people": 10
+            }
+        },
+        {
+            "id": "turn_13",
+            "title": "Затишье",
+            "description": "Новости: \r\n Странные полу люди-полу Машины похищают жителей Марса! \r\n Люди встревожены и запасаются оружием! \r\n people - 5\r\n weapons + 5",
+            "resourceChanges": {
+                "weapons": 5,
+                "supplies": 0,
+                "people": -5
+            }
+        },
+        {
+            "id": "turn_14",
+            "title": "Марсианская угроза",
+            "description": "Новости: \r\n Роботы сходят сума!!! Спасайтесь!!!! Конец близок!!! Скоро нас всех заменят ИИ!!! \r\n Сумасшедшего ученого наконец-то отправили обратно на землю. \r\n people -1",
+            "resourceChanges": {
+                "weapons": 0,
+                "supplies": 0,
+                "people": -1
+            }
+        },
+        {
+            "id": "turn_15",
+            "title": "Расширение базы",
+            "description": "Новости: \r\n Проблемы с логистикой обеспокоили жителей. \r\n Полки магазинов пустеют! Даже оружейных! \r\n supplies - 5\r\n weapons -5",
+            "resourceChanges": {
+                "weapons": -5,
+                "supplies": -5,
+                "people": 0
+            }
+        },
+        {
+            "id": "turn_16",
+            "title": "Дефицит ресурсов",
+            "description": "Новости: \r\n Голод и Стрельба, вот что принес нам новый день! \r\n Повышенные запросы на supplies и weapons. \r\n supplies - 10\r\n people -5",
+            "resourceChanges": {
+                "weapons": 0,
+                "supplies": -10,
+                "people": -5
+            }
+        },
+        {
+            "id": "turn_17",
+            "title": "Удачная охота",
+            "description": "Новости: \r\n Власти отправляют больше военных и оружия. \r\n Марсиане - Реальная угроза! Но это не те о ков вы могли думать! \r\n supplies - 10\r\n weapons -5",
+            "resourceChanges": {
+                "weapons": -5,
+                "supplies": -10,
+                "people": 0
+            }
+        },
+        {
+            "id": "turn_18",
+            "title": "Нападение с двух сторон",
+            "description": "Новости: \r\n Внезапная болезнь начала поражать людей и запасы космического картофеля!!! \r\n Все больше странных людей в красных мантиях замечают на улице. \r\n supplies - 10\r\n people -5",
+            "resourceChanges": {
+                "weapons": 0,
+                "supplies": -10,
+                "people": -5
+            }
+        },
+        {
+            "id": "turn_19",
+            "title": "Предпоследний рывок",
+            "description": "Новости: \r\n Планета объята ужасом! \r\n Срочно! Срочно!! СРОЧНО!!! Присылайте нам все!!! \r\n supplies - 5\r\n people -5\r\n weapons -5",
+            "resourceChanges": {
+                "weapons": -5,
+                "supplies": -5,
+                "people": -5
+            }
+        },
+        {
+            "id": "turn_20",
+            "title": "Финальное испытание",
+            "description": "Новости: \r\n Нам срочно нужен Doomguy! \r\n  \r\n people +1",
+            "resourceChanges": {
+                "weapons": 0,
+                "supplies": 0,
+                "people": 1
+            }
+        }
+    ]
 }
+

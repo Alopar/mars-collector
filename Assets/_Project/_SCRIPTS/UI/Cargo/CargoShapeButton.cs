@@ -10,7 +10,8 @@ namespace GameApplication.UI.Cargo
     {
         [Header("References")]
         public Button button;
-        public Image icon;
+        public Transform shapeGridContainer;
+        public GameObject cellPrefab;
         public TextMeshProUGUI amountText;
         public GameObject selectionFrame;
         
@@ -23,15 +24,7 @@ namespace GameApplication.UI.Cargo
             ShapeData = shapeData;
             _panel = panel;
             
-            if (icon != null && shapeData.icon != null)
-            {
-                icon.sprite = shapeData.icon;
-                icon.color = Color.white;
-            }
-            else if (icon != null)
-            {
-                icon.color = GetColorForType(shapeData.resourceType);
-            }
+            GenerateShapePreview(shapeData);
             
             if (amountText != null)
             {
@@ -44,6 +37,54 @@ namespace GameApplication.UI.Cargo
             }
             
             SetSelected(false);
+        }
+        
+        private void GenerateShapePreview(CargoShapeData shapeData)
+        {
+            if (shapeGridContainer == null || cellPrefab == null)
+                return;
+            
+            foreach (Transform child in shapeGridContainer)
+            {
+                Destroy(child.gameObject);
+            }
+            
+            var gridLayout = shapeGridContainer.GetComponent<GridLayoutGroup>();
+            if (gridLayout != null)
+            {
+                gridLayout.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
+                gridLayout.constraintCount = shapeData.shapeWidth;
+            }
+            
+            var shape = shapeData.GetShape();
+            
+            for (int y = 0; y < shapeData.shapeHeight; y++)
+            {
+                for (int x = 0; x < shapeData.shapeWidth; x++)
+                {
+                    GameObject cellObj = Instantiate(cellPrefab, shapeGridContainer);
+                    var cellView = cellObj.GetComponent<CargoShapeCellView>();
+                    
+                    if (cellView != null)
+                    {
+                        if (shape[y, x] == 1)
+                        {
+                            if (shapeData.icon != null)
+                            {
+                                cellView.SetIcon(shapeData.icon);
+                            }
+                            else
+                            {
+                                cellView.SetColor(GetColorForType(shapeData.resourceType));
+                            }
+                        }
+                        else
+                        {
+                            cellView.Hide();
+                        }
+                    }
+                }
+            }
         }
         
         private Color GetColorForType(ResourceType type)

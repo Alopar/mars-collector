@@ -16,10 +16,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0dfd63a04f5848146b0fca252c55c32e, type: 2}
   - {fileID: 11400000, guid: 65510fe4e22717d469d042563265bde2, type: 2}
   - {fileID: 11400000, guid: c412d6a9f37022045aeb1f9059831070, type: 2}
+  - {fileID: 11400000, guid: 95484d40b9f035c4ebe01294c7b73b28, type: 2}
   supplyShapes:
   - {fileID: 11400000, guid: ac733667c9f3efa47af792a4d6cc33f2, type: 2}
-  - {fileID: 11400000, guid: 1248c49804e151745978412bbbb1a2bc, type: 2}
+  - {fileID: 11400000, guid: 28eab6239581de847a8ec015251fc8d2, type: 2}
+  - {fileID: 11400000, guid: a0abfc23f3eead94484cfc855c074c83, type: 2}
+  - {fileID: 11400000, guid: 21673f5eb30672146bb33e54a4f3a934, type: 2}
   peopleShapes:
   - {fileID: 11400000, guid: 2d5e2564ee22a5a449f4bfc634b9ef50, type: 2}
-  - {fileID: 11400000, guid: 9f9756a2d6eea1c4db82ee5e89b176a4, type: 2}
-  - {fileID: 11400000, guid: 78a933232545cd3488c9dfeeddd81fb9, type: 2}
+  - {fileID: 11400000, guid: e1ebc4b7a56bff04b9d61b0aaec663ce, type: 2}
+  - {fileID: 11400000, guid: 7361e061d159b624e97a4c80bcef2456, type: 2}
+  - {fileID: 11400000, guid: 6c9db5ed1f87375438d8365355037204, type: 2}
