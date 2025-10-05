@@ -28,7 +28,12 @@ namespace GameApplication.UI
         public TextMeshProUGUI peopleTotal;
         
         private MarsColonyState _currentState;
-        private Dictionary<ResourceType, int> _eventChanges = new Dictionary<ResourceType, int>();
+        private Dictionary<ResourceType, int> _eventChanges = new Dictionary<ResourceType, int>
+        {
+            { ResourceType.Weapons, 0 },
+            { ResourceType.Supplies, 0 },
+            { ResourceType.People, 0 }
+        };
         private Dictionary<ResourceType, int> _cargoLoaded = new Dictionary<ResourceType, int>();
         private bool _initialized = false;
 
@@ -63,6 +68,13 @@ namespace GameApplication.UI
             }
             
             _initialized = true;
+            
+            var preview = MarsManager.Instance.GetPreview();
+            if (preview != null && preview.Count > 0)
+            {
+                _eventChanges = new Dictionary<ResourceType, int>(preview);
+            }
+            
             UpdateDisplay();
         }
 
@@ -75,6 +87,10 @@ namespace GameApplication.UI
         private void OnPreviewUpdated(Dictionary<ResourceType, int> preview)
         {
             _eventChanges = new Dictionary<ResourceType, int>(preview);
+            int w = preview.ContainsKey(ResourceType.Weapons) ? preview[ResourceType.Weapons] : 0;
+            int s = preview.ContainsKey(ResourceType.Supplies) ? preview[ResourceType.Supplies] : 0;
+            int p = preview.ContainsKey(ResourceType.People) ? preview[ResourceType.People] : 0;
+            Debug.Log($"MarsStatsView: Preview updated - W:{w} S:{s} P:{p}");
             UpdateDisplay();
         }
         

@@ -168,12 +168,20 @@ namespace GameApplication.Gameplay.Managers
 
         private void ShowNextTurnPreview()
         {
-            TurnEvent nextEvent = EventManager.Instance.PeekNextEvent();
+            TurnEvent currentEvent = EventManager.Instance.GetCurrentEvent();
             
-            if (nextEvent != null)
+            if (currentEvent != null)
             {
-                var preview = nextEvent.GetResourceChanges();
+                var preview = currentEvent.GetResourceChanges();
+                int w = preview.ContainsKey(ResourceType.Weapons) ? preview[ResourceType.Weapons] : 0;
+                int s = preview.ContainsKey(ResourceType.Supplies) ? preview[ResourceType.Supplies] : 0;
+                int p = preview.ContainsKey(ResourceType.People) ? preview[ResourceType.People] : 0;
+                Debug.Log($"ShowNextTurnPreview: Event={currentEvent.title}, Changes: W:{w} S:{s} P:{p}");
                 MarsManager.Instance.SetPreview(preview);
+            }
+            else
+            {
+                Debug.LogWarning("ShowNextTurnPreview: currentEvent is null!");
             }
         }
 

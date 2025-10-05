@@ -12,8 +12,6 @@ namespace GameApplication.Gameplay.Managers
         private List<TurnEvent> _eventSequence;
         private int _currentEventIndex = 0;
 
-        public event Action<TurnEvent> OnEventTriggered;
-
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -87,7 +85,6 @@ namespace GameApplication.Gameplay.Managers
             TurnEvent nextEvent = _eventSequence[_currentEventIndex];
             _currentEventIndex++;
             
-            OnEventTriggered?.Invoke(nextEvent);
             return nextEvent;
         }
 

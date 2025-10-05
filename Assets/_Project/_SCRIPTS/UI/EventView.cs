@@ -10,51 +10,53 @@ namespace GameApplication.UI
         [Header("UI Elements")]
         public TextMeshProUGUI titleText;
         public TextMeshProUGUI descriptionText;
-        public GameObject eventPanel;
-
-        [Header("Settings")]
-        public float displayDuration = 3f;
 
         private void Start()
         {
-            if (EventManager.Instance != null)
+            if (GameFlowManager.Instance != null)
             {
-                EventManager.Instance.OnEventTriggered += ShowEvent;
+                GameFlowManager.Instance.OnTurnChanged += OnTurnChanged;
             }
             
-            if (eventPanel != null)
-                eventPanel.SetActive(false);
+            UpdateEventDisplay();
+        }
+        
+        private void OnTurnChanged(int turn)
+        {
+            UpdateEventDisplay();
         }
 
-        private void ShowEvent(TurnEvent turnEvent)
+        private void UpdateEventDisplay()
         {
-            if (titleText != null)
-                titleText.text = turnEvent.title;
+            if (EventManager.Instance == null)
+                return;
             
-            if (descriptionText != null)
-                descriptionText.text = turnEvent.description;
+            TurnEvent currentEvent = EventManager.Instance.GetCurrentEvent();
             
-            if (eventPanel != null)
+            if (currentEvent != null)
             {
-                eventPanel.SetActive(true);
+                if (titleText != null)
+                    titleText.text = currentEvent.title;
                 
-                if (displayDuration > 0)
-                {
-                    Invoke(nameof(HideEvent), displayDuration);
-                }
+                if (descriptionText != null)
+                    descriptionText.text = currentEvent.description;
             }
-        }
-
-        private void HideEvent()
-        {
-            if (eventPanel != null)
-                eventPanel.SetActive(false);
+            else
+            {
+                if (titleText != null)
+                    titleText.text = "";
+                
+                if (descriptionText != null)
+                    descriptionText.text = "";
+            }
         }
 
         private void OnDestroy()
         {
-            if (EventManager.Instance != null)
-                EventManager.Instance.OnEventTriggered -= ShowEvent;
+            if (GameFlowManager.Instance != null)
+            {
+                GameFlowManager.Instance.OnTurnChanged -= OnTurnChanged;
+            }
         }
     }
 }
