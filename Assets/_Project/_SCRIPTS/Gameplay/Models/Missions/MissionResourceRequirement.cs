@@ -14,7 +14,9 @@ namespace GameApplication.Gameplay.Models.Missions
             CargoManager.Instance.Grid.CalculateLoadedResources()
                 .TryGetValue(ResourceType, out int currentAmount);
 
-            return currentAmount >= MinAmount;
+            int totalResourcesAmount = CargoManager.Instance.Grid.GetTotalLoadedAmount();
+
+            return totalResourcesAmount == currentAmount && currentAmount >= MinAmount;
         }
     }
 }

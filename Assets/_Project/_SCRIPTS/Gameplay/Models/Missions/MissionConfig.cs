@@ -10,18 +10,11 @@ namespace GameApplication.Gameplay.Models.Missions
         public string MissionResult = "";
         public int MinPeopleNeededToStart;
 
-        public MissionResourceRequirement[] ResourceRequirements;
+        public MissionResourceRequirement ResourceRequirements;
         //public SomeOtherRequirements[] SomeOtherRequirements; 
         // тут можно расширить другими типами требований
 
-        public bool CheckRequirements()
-        {
-            foreach (var requirement in ResourceRequirements)
-            {
-                if (!requirement.IsCompleted())
-                    return false;
-            }
-            return true;
-        }
+        public bool CheckRequirements() =>
+            ResourceRequirements.IsCompleted();
     }
 }
