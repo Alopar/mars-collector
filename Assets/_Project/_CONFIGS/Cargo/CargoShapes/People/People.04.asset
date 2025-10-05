@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameApplication.Gameplay.Models.Cargo.CargoShapeData
   shapeName: People.04
   resourceType: 2
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: a005c559e0a062b4dadf16f58ab31e75, type: 3}
   shapeWidth: 2
   shapeHeight: 2
   shapeFlat: 00000000010000000100000000000000
