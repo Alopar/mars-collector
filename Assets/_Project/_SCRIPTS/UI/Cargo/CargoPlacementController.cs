@@ -9,6 +9,9 @@ namespace GameApplication.UI.Cargo
     {
         [Header("References")]
         public CargoGridView gridView;
+        public CargoTabController tabController;
+        
+        [Header("Panels (Legacy - for backward compatibility)")]
         public CargoShapePanel weaponsPanel;
         public CargoShapePanel suppliesPanel;
         public CargoShapePanel peoplePanel;
@@ -23,6 +26,11 @@ namespace GameApplication.UI.Cargo
             if (gridView != null)
             {
                 gridView.SetController(this);
+            }
+            
+            if (tabController != null)
+            {
+                tabController.SetController(this);
             }
             
             TryInitializePanels();
@@ -47,6 +55,16 @@ namespace GameApplication.UI.Cargo
             }
             
             var database = CargoManager.Instance.Database;
+            
+            if (tabController != null)
+            {
+                if (tabController.weaponsPanel != null)
+                    weaponsPanel = tabController.weaponsPanel;
+                if (tabController.suppliesPanel != null)
+                    suppliesPanel = tabController.suppliesPanel;
+                if (tabController.peoplePanel != null)
+                    peoplePanel = tabController.peoplePanel;
+            }
             
             if (weaponsPanel != null)
             {
