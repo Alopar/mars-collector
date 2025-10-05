@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameApplication.UI.Cargo.CargoGridView
   cellSize: 60
-  cellSpacing: 2
+  cellSpacing: 0
   cellPrefab: {fileID: 2832167946529124108, guid: 1d03d36fa7ef5e84fb2962f58c6709aa, type: 3}
   validPlacementColor: {r: 0, g: 1, b: 0.021636724, a: 1}
   invalidPlacementColor: {r: 1, g: 0, b: 0, a: 1}
@@ -366,7 +366,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 60, y: 60}
-  m_Spacing: {x: 2, y: 2}
+  m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 4
 --- !u!1 &2489006518246460572

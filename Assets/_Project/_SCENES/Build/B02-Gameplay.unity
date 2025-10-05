@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventView
       objectReference: {fileID: 0}
+    - target: {fileID: 6175141228902438558, guid: e99483b2b120f48499345a9573f99067, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9194950871867898417, guid: e99483b2b120f48499345a9573f99067, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -180,6 +184,150 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e99483b2b120f48499345a9573f99067, type: 3}
+--- !u!1001 &262722237
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1250403588470588129, guid: ef31fd148669c79408e0527c6aa2fc14, type: 3}
+      propertyPath: _missionDescriptionView
+      value: 
+      objectReference: {fileID: 312612301}
+    - target: {fileID: 2673499938869665183, guid: ef31fd148669c79408e0527c6aa2fc14, type: 3}
+      propertyPath: m_Name
+      value: MissionButtonView
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285661543051834329, guid: ef31fd148669c79408e0527c6aa2fc14, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285661543051834329, guid: ef31fd148669c79408e0527c6aa2fc14, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285661543051834329, guid: ef31fd148669c79408e0527c6aa2fc14, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285661543051834329, guid: ef31fd148669c79408e0527c6aa2fc14, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285661543051834329, guid: ef31fd148669c79408e0527c6aa2fc14, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285661543051834329, guid: ef31fd148669c79408e0527c6aa2fc14, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285661543051834329, guid: ef31fd148669c79408e0527c6aa2fc14, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285661543051834329, guid: ef31fd148669c79408e0527c6aa2fc14, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285661543051834329, guid: ef31fd148669c79408e0527c6aa2fc14, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285661543051834329, guid: ef31fd148669c79408e0527c6aa2fc14, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ef31fd148669c79408e0527c6aa2fc14, type: 3}
+--- !u!114 &262722238 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1250403588470588129, guid: ef31fd148669c79408e0527c6aa2fc14, type: 3}
+  m_PrefabInstance: {fileID: 262722237}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef8e1f0c6fa44b45871570262895a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameApplication.UI.MissionButtonView
+--- !u!1001 &312612300
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8238347442485027021, guid: d68e90f99fa9a8b43b8f511ff85effca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238347442485027021, guid: d68e90f99fa9a8b43b8f511ff85effca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238347442485027021, guid: d68e90f99fa9a8b43b8f511ff85effca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238347442485027021, guid: d68e90f99fa9a8b43b8f511ff85effca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238347442485027021, guid: d68e90f99fa9a8b43b8f511ff85effca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238347442485027021, guid: d68e90f99fa9a8b43b8f511ff85effca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238347442485027021, guid: d68e90f99fa9a8b43b8f511ff85effca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238347442485027021, guid: d68e90f99fa9a8b43b8f511ff85effca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238347442485027021, guid: d68e90f99fa9a8b43b8f511ff85effca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238347442485027021, guid: d68e90f99fa9a8b43b8f511ff85effca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8542249565256693001, guid: d68e90f99fa9a8b43b8f511ff85effca, type: 3}
+      propertyPath: m_Name
+      value: MissionDescriptionView
+      objectReference: {fileID: 0}
+    - target: {fileID: 8542249565256693001, guid: d68e90f99fa9a8b43b8f511ff85effca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d68e90f99fa9a8b43b8f511ff85effca, type: 3}
+--- !u!114 &312612301 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4206157739770861586, guid: d68e90f99fa9a8b43b8f511ff85effca, type: 3}
+  m_PrefabInstance: {fileID: 312612300}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 142dba1d3afc9cb49a405f1260e1a2d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameApplication.UI.MissionDescriptionView
 --- !u!1 &583395843
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,6 +1120,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1766576878513034064, guid: 3b50d5bada83969419f4065b5da7754e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766576878513034064, guid: 3b50d5bada83969419f4065b5da7754e, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1056,6 +1208,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4978151176355355939, guid: 3b50d5bada83969419f4065b5da7754e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978151176355355939, guid: 3b50d5bada83969419f4065b5da7754e, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1125,6 +1281,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6858153902344211132, guid: 3b50d5bada83969419f4065b5da7754e, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858153902344211132, guid: 3b50d5bada83969419f4065b5da7754e, type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6858153902344211132, guid: 3b50d5bada83969419f4065b5da7754e, type: 3}
@@ -1291,6 +1451,7 @@ GameObject:
   - component: {fileID: 1681718735}
   - component: {fileID: 1681718734}
   - component: {fileID: 1681718738}
+  - component: {fileID: 1681718739}
   m_Layer: 0
   m_Name: GameManagers
   m_TagString: Untagged
@@ -1375,6 +1536,94 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 463bb7b9bd27bb04898066229c0e2f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameApplication.Gameplay.Managers.CargoManager
+--- !u!114 &1681718739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681718732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9551af504c0467549b0cdef516181213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameApplication.Gameplay.Managers.MissionsManager
+  _missionButtonView: {fileID: 262722238}
+  _missionDescriptionView: {fileID: 312612301}
+  _missionResultView: {fileID: 2018203700}
+  _missionChain: {fileID: 11400000, guid: 73b2698e0230c994fa7679e7a8b0a65a, type: 2}
+--- !u!1001 &2018203699
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 336450825506643534, guid: 4ced7f4947a138a45923c2bca3b1f71a, type: 3}
+      propertyPath: m_Name
+      value: MissionResultView
+      objectReference: {fileID: 0}
+    - target: {fileID: 336450825506643534, guid: 4ced7f4947a138a45923c2bca3b1f71a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3179716773257890342, guid: 4ced7f4947a138a45923c2bca3b1f71a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3179716773257890342, guid: 4ced7f4947a138a45923c2bca3b1f71a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3179716773257890342, guid: 4ced7f4947a138a45923c2bca3b1f71a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3179716773257890342, guid: 4ced7f4947a138a45923c2bca3b1f71a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3179716773257890342, guid: 4ced7f4947a138a45923c2bca3b1f71a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3179716773257890342, guid: 4ced7f4947a138a45923c2bca3b1f71a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3179716773257890342, guid: 4ced7f4947a138a45923c2bca3b1f71a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3179716773257890342, guid: 4ced7f4947a138a45923c2bca3b1f71a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3179716773257890342, guid: 4ced7f4947a138a45923c2bca3b1f71a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3179716773257890342, guid: 4ced7f4947a138a45923c2bca3b1f71a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4ced7f4947a138a45923c2bca3b1f71a, type: 3}
+--- !u!114 &2018203700 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3033137190163718806, guid: 4ced7f4947a138a45923c2bca3b1f71a, type: 3}
+  m_PrefabInstance: {fileID: 2018203699}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e5836590eac87045b4ab5b1bc577642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameApplication.UI.MissionResultView
 --- !u!1 &246984593026580310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1544,5 +1793,8 @@ SceneRoots:
   - {fileID: 197009675}
   - {fileID: 808806843}
   - {fileID: 1290549968}
+  - {fileID: 2018203699}
+  - {fileID: 262722237}
+  - {fileID: 312612300}
   - {fileID: 1036307412168485421}
   - {fileID: 3556157930168267279}
