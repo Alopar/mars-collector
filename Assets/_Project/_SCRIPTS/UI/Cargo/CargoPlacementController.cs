@@ -124,12 +124,7 @@ namespace GameApplication.UI.Cargo
             
             if (_isValidPlacement)
             {
-                bool placed = CargoManager.Instance.PlaceShape(_selectedShape, x, y);
-                
-                if (placed)
-                {
-                    DeselectShape();
-                }
+                CargoManager.Instance.PlaceShape(_selectedShape, x, y);
             }
         }
         
