@@ -935,7 +935,7 @@ MonoBehaviour:
   m_Spacing: 5
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
+  m_ChildControlWidth: 1
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
@@ -1240,6 +1240,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2651915766035438138}
     m_Modifications:
+    - target: {fileID: 1952592982057970355, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
+      propertyPath: m_Color.b
+      value: 0.36078432
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952592982057970355, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952592982057970355, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
+      propertyPath: m_Color.r
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 2110362041411355006, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6dfd1efde5145747810dfa45115ce21, type: 3}
     - target: {fileID: 4874520851913794389, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
       propertyPath: m_Name
       value: SuppliesTabButton
@@ -1270,7 +1286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6323368045768556747, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6323368045768556747, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1324,6 +1340,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6869983321916738769, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6dfd1efde5145747810dfa45115ce21, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1353,6 +1373,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2651915766035438138}
     m_Modifications:
+    - target: {fileID: 1952592982057970355, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952592982057970355, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
+      propertyPath: m_Color.g
+      value: 0.62352943
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952592982057970355, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 2110362041411355006, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a005c559e0a062b4dadf16f58ab31e75, type: 3}
     - target: {fileID: 4874520851913794389, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
       propertyPath: m_Name
       value: PeopleTabButton
@@ -1383,7 +1419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6323368045768556747, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6323368045768556747, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1437,6 +1473,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6869983321916738769, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a005c559e0a062b4dadf16f58ab31e75, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1466,6 +1506,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2651915766035438138}
     m_Modifications:
+    - target: {fileID: 1952592982057970355, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952592982057970355, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 2110362041411355006, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3db9a1fc8f3f39847830f0767f983bb1, type: 3}
     - target: {fileID: 4874520851913794389, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
       propertyPath: m_Name
       value: WeaponsTabButton
@@ -1496,7 +1548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6323368045768556747, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6323368045768556747, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1550,6 +1602,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6869983321916738769, guid: f7acbafe6e976ef40a627b5a2d5d1420, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3db9a1fc8f3f39847830f0767f983bb1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

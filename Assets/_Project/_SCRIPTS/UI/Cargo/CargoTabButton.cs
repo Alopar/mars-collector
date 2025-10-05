@@ -9,13 +9,8 @@ namespace GameApplication.UI.Cargo
     {
         [Header("References")]
         public Button button;
-        public Image background;
-        public TextMeshProUGUI label;
-        public Image icon;
-        
-        [Header("Colors")]
-        public Color selectedColor = new Color(0.2f, 0.2f, 0.2f);
-        public Color deselectedColor = new Color(0.5f, 0.5f, 0.5f);
+        public GameObject selectedVisual;
+        public GameObject deselectedVisual;
         
         public ResourceType ResourceType { get; private set; }
         
@@ -27,19 +22,10 @@ namespace GameApplication.UI.Cargo
             ResourceType = resourceType;
             _tabController = tabController;
             
-            if (label != null)
-            {
-                label.text = GetLabelForType(resourceType);
-            }
-            
-            if (icon != null)
-            {
-                icon.color = GetColorForType(resourceType);
-            }
-            
             if (button != null)
             {
                 button.onClick.AddListener(OnClick);
+                button.transition = Selectable.Transition.None;
             }
             
             SetSelected(false);
@@ -57,31 +43,14 @@ namespace GameApplication.UI.Cargo
         {
             _isSelected = selected;
             
-            if (background != null)
+            if (selectedVisual != null)
             {
-                background.color = selected ? selectedColor : deselectedColor;
+                selectedVisual.SetActive(selected);
             }
-        }
-        
-        private string GetLabelForType(ResourceType type)
-        {
-            switch (type)
+            
+            if (deselectedVisual != null)
             {
-                case ResourceType.Weapons: return "Оружие";
-                case ResourceType.Supplies: return "Припасы";
-                case ResourceType.People: return "Люди";
-                default: return "???";
-            }
-        }
-        
-        private Color GetColorForType(ResourceType type)
-        {
-            switch (type)
-            {
-                case ResourceType.Weapons: return new Color(1f, 0.3f, 0.3f);
-                case ResourceType.Supplies: return new Color(0.3f, 1f, 0.3f);
-                case ResourceType.People: return new Color(0.3f, 0.3f, 1f);
-                default: return Color.white;
+                deselectedVisual.SetActive(!selected);
             }
         }
     }
