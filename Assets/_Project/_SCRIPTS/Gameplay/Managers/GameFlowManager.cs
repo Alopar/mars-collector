@@ -1,7 +1,6 @@
+using GameApplication.Gameplay.Models;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using GameApplication.Gameplay.Models;
 using UnityEngine;
 
 namespace GameApplication.Gameplay.Managers
@@ -76,6 +75,7 @@ namespace GameApplication.Gameplay.Managers
             {
                 CargoManager.Instance.Initialize(Config.GridWidth, Config.GridHeight, Config.CargoDatabase);
             }
+            MissionsManager.Instance.Initialize();
 
             ShipManager.Instance.OnShipLaunched += HandleShipLaunched;
             MarsManager.Instance.OnGameOver += HandleMarsGameOver;
@@ -149,6 +149,9 @@ namespace GameApplication.Gameplay.Managers
                     EndGame(true, $"Победа! Вы продержались {Config.TurnsToWin} ходов!");
                     yield break;
                 }
+
+                MissionsManager.Instance.CheckMissionComplete();
+                MissionsManager.Instance.CheckMissionCanStart();
 
                 ShipManager.Instance.ClearCargo();
                 
