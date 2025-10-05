@@ -29,14 +29,31 @@ namespace GameApplication.UI
         private MarsColonyState _currentState;
         private Dictionary<ResourceType, int> _eventChanges = new Dictionary<ResourceType, int>();
         private Dictionary<ResourceType, int> _cargoLoaded = new Dictionary<ResourceType, int>();
+        private bool _initialized = false;
 
         private void Start()
         {
-            if (MarsManager.Instance != null)
+            TryInitialize();
+        }
+        
+        private void Update()
+        {
+            if (!_initialized)
             {
-                MarsManager.Instance.OnColonyStateChanged += OnColonyStateChanged;
-                MarsManager.Instance.OnPreviewUpdated += OnPreviewUpdated;
+                TryInitialize();
             }
+        }
+        
+        private void TryInitialize()
+        {
+            if (_initialized)
+                return;
+            
+            if (MarsManager.Instance == null || MarsManager.Instance.ColonyState == null)
+                return;
+            
+            MarsManager.Instance.OnColonyStateChanged += OnColonyStateChanged;
+            MarsManager.Instance.OnPreviewUpdated += OnPreviewUpdated;
             
             if (CargoManager.Instance != null)
             {
@@ -44,6 +61,7 @@ namespace GameApplication.UI
                 CargoManager.Instance.OnCargoCleared += OnCargoCleared;
             }
             
+            _initialized = true;
             UpdateDisplay();
         }
 
@@ -92,7 +110,7 @@ namespace GameApplication.UI
         {
             if (_currentState == null)
             {
-                if (MarsManager.Instance != null)
+                if (MarsManager.Instance != null && MarsManager.Instance.ColonyState != null)
                 {
                     _currentState = MarsManager.Instance.ColonyState;
                 }
@@ -100,6 +118,11 @@ namespace GameApplication.UI
                 {
                     return;
                 }
+            }
+            
+            if (_currentState == null)
+            {
+                return;
             }
             
             if (_cargoLoaded == null || _cargoLoaded.Count == 0)
@@ -134,9 +157,28 @@ namespace GameApplication.UI
             TextMeshProUGUI loadedText,
             TextMeshProUGUI totalText)
         {
-            int expenses = _eventChanges.ContainsKey(type) ? _eventChanges[type] : 0;
+            int eventChanges = _eventChanges.ContainsKey(type) ? _eventChanges[type] : 0;
             int loaded = _cargoLoaded.ContainsKey(type) ? _cargoLoaded[type] : 0;
-            int total = current + expenses + loaded;
+            
+            int totalPeopleAfterDelivery = _currentState.People + (_cargoLoaded.ContainsKey(ResourceType.People) ? _cargoLoaded[ResourceType.People] : 0);
+            
+            int expenses = eventChanges;
+            
+            if (GameFlowManager.Instance != null && GameFlowManager.Instance.Config != null)
+            {
+                if (type == ResourceType.Weapons)
+                {
+                    int consumption = Mathf.RoundToInt(totalPeopleAfterDelivery * GameFlowManager.Instance.Config.WeaponsPerPerson);
+                    expenses -= consumption;
+                }
+                else if (type == ResourceType.Supplies)
+                {
+                    int consumption = Mathf.RoundToInt(totalPeopleAfterDelivery * GameFlowManager.Instance.Config.SuppliesPerPerson);
+                    expenses -= consumption;
+                }
+            }
+            
+            int total = current + loaded + expenses;
             
             if (currentText != null)
                 currentText.text = current.ToString();
@@ -153,6 +195,9 @@ namespace GameApplication.UI
 
         private void OnDestroy()
         {
+            if (!_initialized)
+                return;
+            
             if (MarsManager.Instance != null)
             {
                 MarsManager.Instance.OnColonyStateChanged -= OnColonyStateChanged;

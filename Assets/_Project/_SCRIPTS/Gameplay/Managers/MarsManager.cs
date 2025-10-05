@@ -78,12 +78,40 @@ namespace GameApplication.Gameplay.Managers
             ColonyState.ApplyCargoDelivery(cargo);
             OnColonyStateChanged?.Invoke(ColonyState);
         }
+        
+        public void ApplyCargoDeliverySilent(ShipCargo cargo)
+        {
+            ColonyState.ApplyCargoDelivery(cargo);
+        }
 
         public void ApplyPeopleConsumption(float weaponsPerPerson, float suppliesPerPerson)
         {
             ColonyState.ApplyPeopleConsumption(weaponsPerPerson, suppliesPerPerson);
             OnColonyStateChanged?.Invoke(ColonyState);
 
+            if (ColonyState.IsGameOver())
+            {
+                OnGameOver?.Invoke(ColonyState.GetGameOverReason());
+            }
+        }
+        
+        public void ApplyPeopleConsumptionSilent(float weaponsPerPerson, float suppliesPerPerson)
+        {
+            ColonyState.ApplyPeopleConsumption(weaponsPerPerson, suppliesPerPerson);
+        }
+        
+        public void ApplyChangesSilent(Dictionary<ResourceType, int> changes)
+        {
+            foreach (var change in changes)
+            {
+                ColonyState.ModifyResource(change.Key, change.Value);
+            }
+        }
+        
+        public void NotifyStateChanged()
+        {
+            OnColonyStateChanged?.Invoke(ColonyState);
+            
             if (ColonyState.IsGameOver())
             {
                 OnGameOver?.Invoke(ColonyState.GetGameOverReason());
