@@ -36,13 +36,12 @@ namespace GameApplication.UI.Cargo
         
         public void OnShapeButtonClicked(CargoShapeButton button)
         {
-            DeselectAll();
-            button.SetSelected(true);
-            
             if (_controller != null && button.ShapeData != null)
             {
                 _controller.SelectShape(button.ShapeData);
             }
+            
+            button.SetSelected(true);
         }
         
         public void DeselectAll()

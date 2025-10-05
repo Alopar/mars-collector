@@ -72,6 +72,10 @@ namespace GameApplication.UI.Cargo
         
         public void SelectShape(CargoShapeData shape)
         {
+            if (weaponsPanel != null) weaponsPanel.DeselectAll();
+            if (suppliesPanel != null) suppliesPanel.DeselectAll();
+            if (peoplePanel != null) peoplePanel.DeselectAll();
+            
             _selectedShape = shape;
             Debug.Log($"Selected shape: {shape.shapeName}");
         }
