@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
 using GameApplication.Gameplay.Managers;
@@ -9,118 +8,161 @@ namespace GameApplication.UI
 {
     public class MarsStatsView : MonoBehaviour
     {
-        [Header("Bars")]
-        public Slider weaponsBar;
-        public Slider suppliesBar;
-        public Slider peopleBar;
-
-        [Header("Value Texts")]
-        public TextMeshProUGUI weaponsText;
-        public TextMeshProUGUI suppliesText;
-        public TextMeshProUGUI peopleText;
-
-        [Header("Preview Texts")]
-        public TextMeshProUGUI weaponsPreview;
-        public TextMeshProUGUI suppliesPreview;
-        public TextMeshProUGUI peoplePreview;
-
-        [Header("Colors")]
-        public Color safeColor = Color.green;
-        public Color warningColor = Color.yellow;
-        public Color dangerColor = Color.red;
+        [Header("Weapons Row")]
+        public TextMeshProUGUI weaponsCurrent;
+        public TextMeshProUGUI weaponsExpenses;
+        public TextMeshProUGUI weaponsLoaded;
+        public TextMeshProUGUI weaponsTotal;
+        
+        [Header("Supplies Row")]
+        public TextMeshProUGUI suppliesCurrent;
+        public TextMeshProUGUI suppliesExpenses;
+        public TextMeshProUGUI suppliesLoaded;
+        public TextMeshProUGUI suppliesTotal;
+        
+        [Header("People Row")]
+        public TextMeshProUGUI peopleCurrent;
+        public TextMeshProUGUI peopleExpenses;
+        public TextMeshProUGUI peopleLoaded;
+        public TextMeshProUGUI peopleTotal;
+        
+        private MarsColonyState _currentState;
+        private Dictionary<ResourceType, int> _eventChanges = new Dictionary<ResourceType, int>();
+        private Dictionary<ResourceType, int> _cargoLoaded = new Dictionary<ResourceType, int>();
 
         private void Start()
         {
             if (MarsManager.Instance != null)
             {
-                MarsManager.Instance.OnColonyStateChanged += UpdateBars;
-                MarsManager.Instance.OnPreviewUpdated += UpdatePreview;
+                MarsManager.Instance.OnColonyStateChanged += OnColonyStateChanged;
+                MarsManager.Instance.OnPreviewUpdated += OnPreviewUpdated;
             }
+            
+            if (CargoManager.Instance != null)
+            {
+                CargoManager.Instance.OnResourcesChanged += OnCargoChanged;
+                CargoManager.Instance.OnCargoCleared += OnCargoCleared;
+            }
+            
+            UpdateDisplay();
         }
 
-        private void UpdateBars(MarsColonyState state)
+        private void OnColonyStateChanged(MarsColonyState state)
         {
-            weaponsBar.value = state.Weapons / 100f;
-            suppliesBar.value = state.Supplies / 100f;
-            peopleBar.value = state.People / 100f;
-
-            weaponsText.text = $"Оружие: {state.Weapons}/100";
-            suppliesText.text = $"Припасы: {state.Supplies}/100";
-            peopleText.text = $"Люди: {state.People}/100";
-
-            UpdateBarColors(state);
+            _currentState = state;
+            UpdateDisplay();
         }
 
-        private void UpdateBarColors(MarsColonyState state)
+        private void OnPreviewUpdated(Dictionary<ResourceType, int> preview)
         {
-            if (weaponsBar.fillRect != null)
-            {
-                var image = weaponsBar.fillRect.GetComponent<Image>();
-                if (image != null) image.color = GetColorForValue(state.Weapons);
-            }
-
-            if (suppliesBar.fillRect != null)
-            {
-                var image = suppliesBar.fillRect.GetComponent<Image>();
-                if (image != null) image.color = GetColorForValue(state.Supplies);
-            }
-
-            if (peopleBar.fillRect != null)
-            {
-                var image = peopleBar.fillRect.GetComponent<Image>();
-                if (image != null) image.color = GetColorForValue(state.People);
-            }
+            _eventChanges = new Dictionary<ResourceType, int>(preview);
+            UpdateDisplay();
         }
-
-        private Color GetColorForValue(int value)
+        
+        private void OnCargoChanged(ResourceType type, int delta)
         {
-            if (value <= 20 || value >= 80) return dangerColor;
-            if (value <= 40 || value >= 60) return warningColor;
-            return safeColor;
+            UpdateCargoData();
+            UpdateDisplay();
         }
-
-        private void UpdatePreview(Dictionary<ResourceType, int> preview)
+        
+        private void OnCargoCleared()
         {
-            if (preview.ContainsKey(ResourceType.Weapons))
+            UpdateCargoData();
+            UpdateDisplay();
+        }
+        
+        private void UpdateCargoData()
+        {
+            if (CargoManager.Instance != null)
             {
-                int val = preview[ResourceType.Weapons];
-                weaponsPreview.text = val >= 0 ? $"+{val}" : val.ToString();
-                weaponsPreview.color = val >= 0 ? Color.green : Color.red;
+                _cargoLoaded = CargoManager.Instance.GetLoadedResources();
             }
             else
             {
-                weaponsPreview.text = "";
+                _cargoLoaded = new Dictionary<ResourceType, int>
+                {
+                    { ResourceType.Weapons, 0 },
+                    { ResourceType.Supplies, 0 },
+                    { ResourceType.People, 0 }
+                };
             }
+        }
 
-            if (preview.ContainsKey(ResourceType.Supplies))
+        private void UpdateDisplay()
+        {
+            if (_currentState == null)
             {
-                int val = preview[ResourceType.Supplies];
-                suppliesPreview.text = val >= 0 ? $"+{val}" : val.ToString();
-                suppliesPreview.color = val >= 0 ? Color.green : Color.red;
+                if (MarsManager.Instance != null)
+                {
+                    _currentState = MarsManager.Instance.ColonyState;
+                }
+                else
+                {
+                    return;
+                }
             }
-            else
+            
+            if (_cargoLoaded == null || _cargoLoaded.Count == 0)
             {
-                suppliesPreview.text = "";
+                UpdateCargoData();
             }
+            
+            UpdateRow(
+                ResourceType.Weapons,
+                _currentState.Weapons,
+                weaponsCurrent, weaponsExpenses, weaponsLoaded, weaponsTotal
+            );
+            
+            UpdateRow(
+                ResourceType.Supplies,
+                _currentState.Supplies,
+                suppliesCurrent, suppliesExpenses, suppliesLoaded, suppliesTotal
+            );
+            
+            UpdateRow(
+                ResourceType.People,
+                _currentState.People,
+                peopleCurrent, peopleExpenses, peopleLoaded, peopleTotal
+            );
+        }
 
-            if (preview.ContainsKey(ResourceType.People))
-            {
-                int val = preview[ResourceType.People];
-                peoplePreview.text = val >= 0 ? $"+{val}" : val.ToString();
-                peoplePreview.color = val >= 0 ? Color.green : Color.red;
-            }
-            else
-            {
-                peoplePreview.text = "";
-            }
+        private void UpdateRow(
+            ResourceType type,
+            int current,
+            TextMeshProUGUI currentText,
+            TextMeshProUGUI expensesText,
+            TextMeshProUGUI loadedText,
+            TextMeshProUGUI totalText)
+        {
+            int expenses = _eventChanges.ContainsKey(type) ? _eventChanges[type] : 0;
+            int loaded = _cargoLoaded.ContainsKey(type) ? _cargoLoaded[type] : 0;
+            int total = current + expenses + loaded;
+            
+            if (currentText != null)
+                currentText.text = current.ToString();
+            
+            if (expensesText != null)
+                expensesText.text = expenses.ToString();
+            
+            if (loadedText != null)
+                loadedText.text = loaded.ToString();
+            
+            if (totalText != null)
+                totalText.text = total.ToString();
         }
 
         private void OnDestroy()
         {
             if (MarsManager.Instance != null)
             {
-                MarsManager.Instance.OnColonyStateChanged -= UpdateBars;
-                MarsManager.Instance.OnPreviewUpdated -= UpdatePreview;
+                MarsManager.Instance.OnColonyStateChanged -= OnColonyStateChanged;
+                MarsManager.Instance.OnPreviewUpdated -= OnPreviewUpdated;
+            }
+            
+            if (CargoManager.Instance != null)
+            {
+                CargoManager.Instance.OnResourcesChanged -= OnCargoChanged;
+                CargoManager.Instance.OnCargoCleared -= OnCargoCleared;
             }
         }
     }
