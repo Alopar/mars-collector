@@ -163,7 +163,7 @@
         {
             "id": "turn_17",
             "title": "Mars News",
-            "description": "Fierce fighting at the colony walls. \r\n Johnny! They're in flying saucers! \r\n\r\n [weapons -3, supplies -2, people -6]",
+            "description": "Fierce fighting at the colony walls. \r\n Johnny! They're in UFO!!! \r\n\r\n [weapons -3, supplies -2, people -6]",
             "resourceChanges": {
                 "weapons": -3,
                 "supplies": -2,
