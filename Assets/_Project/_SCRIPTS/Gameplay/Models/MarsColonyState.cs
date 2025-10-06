@@ -29,8 +29,6 @@ namespace GameApplication.Gameplay.Models
 
         public void SetResource(ResourceType type, int value)
         {
-            value = Mathf.Clamp(value, MinValue, MaxValue);
-            
             switch (type)
             {
                 case ResourceType.Weapons:
@@ -74,20 +72,20 @@ namespace GameApplication.Gameplay.Models
 
         public bool IsGameOver()
         {
-            return Weapons <= MinValue || Weapons >= MaxValue ||
-                   Supplies <= MinValue || Supplies >= MaxValue ||
-                   People <= MinValue || People >= MaxValue;
+            return Weapons <= MinValue || Weapons > MaxValue ||
+                   Supplies <= MinValue || Supplies > MaxValue ||
+                   People <= MinValue || People > MaxValue;
         }
 
         public string GetGameOverReason()
         {
-            if (Weapons <= MinValue) return "Martians destroyed the colony due to a lack of weapons!";
-            if (Weapons >= MaxValue) return "Militarization led to a revolution!";
-            if (Supplies <= MinValue) return "The colonists died of hunger!";
-            if (Supplies >= MaxValue) return "Hedonism and excess destroyed the colony!";
-            if (People <= MinValue) return "The colony’s population went extinct!";
-            if (People >= MaxValue) return "Overpopulation caused a collapse!";
-            return "Game over";
+            if (Weapons <= MinValue) return "Марсиане уничтожили колонию из-за нехватки оружия!";
+            if (Weapons > MaxValue) return "Милитаризация привела к революции!";
+            if (Supplies <= MinValue) return "Колонисты погибли от голода!";
+            if (Supplies > MaxValue) return "Гедонизм и излишества погубили колонию!";
+            if (People <= MinValue) return "Население колонии вымерло!";
+            if (People > MaxValue) return "Перенаселение привела к коллапсу!";
+            return "Игра окончена";
         }
 
         public Dictionary<ResourceType, int> GetAllValues()
