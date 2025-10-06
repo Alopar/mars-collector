@@ -180,6 +180,106 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b88b04cd81139fc45bd654f2acd7053c, type: 3}
+--- !u!114 &108594699 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8858046146138520267, guid: b88b04cd81139fc45bd654f2acd7053c, type: 3}
+  m_PrefabInstance: {fileID: 108594698}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1001 &113282912
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2347048317071106624, guid: cae58fc759ba61d41874215240a6f10e, type: 3}
+      propertyPath: m_Name
+      value: TutorialView
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524655692123144786, guid: cae58fc759ba61d41874215240a6f10e, type: 3}
+      propertyPath: _openButton
+      value: 
+      objectReference: {fileID: 108594699}
+    - target: {fileID: 3524655692123144786, guid: cae58fc759ba61d41874215240a6f10e, type: 3}
+      propertyPath: _closeButton
+      value: 
+      objectReference: {fileID: 113282913}
+    - target: {fileID: 3524655692123144786, guid: cae58fc759ba61d41874215240a6f10e, type: 3}
+      propertyPath: _tutorialPanel
+      value: 
+      objectReference: {fileID: 113282914}
+    - target: {fileID: 8186335248245313958, guid: cae58fc759ba61d41874215240a6f10e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 941.4103
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186335248245313958, guid: cae58fc759ba61d41874215240a6f10e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 880.162
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186335248245313958, guid: cae58fc759ba61d41874215240a6f10e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186335248245313958, guid: cae58fc759ba61d41874215240a6f10e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186335248245313958, guid: cae58fc759ba61d41874215240a6f10e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186335248245313958, guid: cae58fc759ba61d41874215240a6f10e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186335248245313958, guid: cae58fc759ba61d41874215240a6f10e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186335248245313958, guid: cae58fc759ba61d41874215240a6f10e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186335248245313958, guid: cae58fc759ba61d41874215240a6f10e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186335248245313958, guid: cae58fc759ba61d41874215240a6f10e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807709966783178029, guid: cae58fc759ba61d41874215240a6f10e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cae58fc759ba61d41874215240a6f10e, type: 3}
+--- !u!114 &113282913 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3881780213552862887, guid: cae58fc759ba61d41874215240a6f10e, type: 3}
+  m_PrefabInstance: {fileID: 113282912}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &113282914 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8807709966783178029, guid: cae58fc759ba61d41874215240a6f10e, type: 3}
+  m_PrefabInstance: {fileID: 113282912}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &197009675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2186,5 +2286,6 @@ SceneRoots:
   - {fileID: 262722237}
   - {fileID: 312612300}
   - {fileID: 1290549968}
+  - {fileID: 113282912}
   - {fileID: 1036307412168485421}
   - {fileID: 3556157930168267279}
