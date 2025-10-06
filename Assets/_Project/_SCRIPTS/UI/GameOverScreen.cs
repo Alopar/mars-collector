@@ -1,7 +1,7 @@
+using GameApplication.Gameplay.Managers;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using GameApplication.Gameplay.Managers;
 
 namespace GameApplication.UI
 {
@@ -44,9 +44,9 @@ namespace GameApplication.UI
             if (statsText != null)
             {
                 var gameState = GameFlowManager.Instance.CurrentGameState;
-                statsText.text = $"Статистика:\n" +
-                                $"Ходов прожито: {gameState.CurrentTurn}\n" +
-                                $"Кораблей отправлено: {gameState.ShipsSent}";
+                statsText.text = $"Statystics:\n" +
+                                $"Turns survived: {gameState.CurrentTurn}\n" +
+                                $"Ships dispatched: {gameState.ShipsSent}";
             }
 
             if (gameOverPanel != null)
