@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a1a4ada0fee9654e9fdf5deb981664f, type: 3}
-  m_Name: Mission1
+  m_Name: Mission4
   m_EditorClassIdentifier: Assembly-CSharp::GameApplication.Gameplay.Models.Missions.MissionConfig
-  MissionName: Mission 1
-  MissionDescription: "Attention! We\u2019re looking for suppliers! We promise long-term
-    cooperation and DELICIOUS offers. \\nTask: send ONLY humans to Mars (any quantity)."
+  MissionName: Mission 4
+  MissionDescription: "URGENT! The last delivery amazed us. We need more immediately.
+    Let\u2019s speed up the pace! \\nTask: send ONLY humans to Mars (2 or more).
+    \\n(Bonus: humans require less weaponry and food)"
   MissionResult: 
-  MinPeopleNeededToStart: 0
+  MinPeopleNeededToStart: 3
   ResourceRequirements:
     ResourceType: 2
-    MinAmount: 1
+    MinAmount: 2
