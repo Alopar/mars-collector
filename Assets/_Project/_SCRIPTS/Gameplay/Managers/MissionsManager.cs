@@ -64,6 +64,17 @@ namespace GameApplication.Gameplay.Managers
             _missionButtonView.Hide();
         }
 
+        public bool SecretEnding()
+        {
+            if (_missionIsActive == false) return false;
+            if (!_missionChain.Missions[_currentMissionIndex].CheckRequirements()) return false;
+
+            if (_currentMissionIndex == _missionChain.Missions.Length - 1)
+                return true;
+
+            return false;
+        }
+
         public void CheckMissionCanStart()
         {
             if (_currentMissionIndex == -1) return;

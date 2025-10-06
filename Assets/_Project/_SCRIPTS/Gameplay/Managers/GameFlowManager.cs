@@ -143,6 +143,12 @@ namespace GameApplication.Gameplay.Managers
                 CurrentGameState.IncrementTurn();
                 OnTurnChanged?.Invoke(CurrentGameState.CurrentTurn);
 
+                if (MissionsManager.Instance.SecretEnding())
+                {
+                    EndGame(true, "Secret Ending Unlocked! You Win!");
+                    yield break;
+                }
+
                 if (CurrentGameState.CheckVictory())
                 {
                     EndGame(true, $"Win! You've lasted {Config.TurnsToWin} turns!");
