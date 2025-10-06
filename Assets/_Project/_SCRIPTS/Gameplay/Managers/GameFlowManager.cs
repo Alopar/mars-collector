@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 namespace GameApplication.Gameplay.Managers
 {
@@ -210,9 +211,11 @@ namespace GameApplication.Gameplay.Managers
                 CargoManager.Instance.ClearCargo();
             }
             
-            SetPhase(GamePhase.Loading);
-            OnTurnChanged?.Invoke(0);
-            ShowNextTurnPreview();
+            SceneManager.LoadScene(1);
+            
+            // SetPhase(GamePhase.Loading);
+            // OnTurnChanged?.Invoke(0);
+            // ShowNextTurnPreview();
         }
 
         private void SetPhase(GamePhase newPhase)
