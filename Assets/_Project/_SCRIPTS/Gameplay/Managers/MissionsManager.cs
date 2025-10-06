@@ -37,6 +37,13 @@ namespace GameApplication.Gameplay.Managers
 
             CargoManager.Instance.OnResourcesChanged += HandleResourcesChanged;
             GameFlowManager.Instance.OnTurnChanged += OnTurnChanged;
+            GameFlowManager.Instance.OnGameEnded += GameEnded;
+        }
+
+        private void GameEnded(bool _, string __)
+        {
+            _currentMissionIndex = -1;
+            _missionIsActive = false;
         }
 
         public void CheckMissionComplete()
