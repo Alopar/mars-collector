@@ -3,7 +3,7 @@
         {
             "id": "turn_1",
             "title": "Mars News",
-            "description": "Новый аванпост людей на Марсе! \r\n Новая планета - новые возможности! \r\n weapons +2\r\n supplies +5",
+            "description": "A new human outpost on Mars! \r\n A new planet - new opportunities! \r\n\r\n [weapons +2, supplies +5]",
             "resourceChanges": {
                 "weapons": 2,
                 "supplies": 5,
@@ -13,7 +13,7 @@
         {
             "id": "turn_2",
             "title": "Mars News",
-            "description": "Мы укрепляем наши базы и зазвиваем лабаратории. \r\n Несколько человек пропали безвести. \r\n weapons +3\r\n supplies +6\r\n people -2",
+            "description": "We are fortifying our bases and setting up laboratories. \r\n Several people went missing. \r\n\r\n [weapons +3, supplies +6, people -2]",
             "resourceChanges": {
                 "weapons": 3,
                 "supplies": 6,
@@ -23,7 +23,7 @@
         {
             "id": "turn_3",
             "title": "Mars News",
-            "description": "Ученые расширяют свой контингент. \r\n Время новых Экспериментов! \r\n weapons +4\r\n supplies +4",
+            "description": "Scientists are expanding their contingent. \r\n Time for new experiments! \r\n\r\n [weapons +4, supplies +4]",
             "resourceChanges": {
                 "weapons": 4,
                 "supplies": 4,
@@ -33,7 +33,7 @@
         {
             "id": "turn_4",
             "title": "Mars News",
-            "description": "Небольшая авария при испытании телепорта. \r\n Жертвы только среди людей. Но с другой стороны мы получили новые объекты! \r\n weapons +5\r\n supplies +3\r\n people -4",
+            "description": "A minor accident during a teleporter test. \r\n Casualties only among people. But on the other hand, we received new assets! \r\n\r\n [weapons +5, supplies +3, people -4]",
             "resourceChanges": {
                 "weapons": 5,
                 "supplies": 3,
@@ -43,7 +43,7 @@
         {
             "id": "turn_5",
             "title": "Mars News",
-            "description": "Космическая логистика процветает! \r\n Больше ученых умных и гениальных! \r\n weapons +6\r\n supplies +2",
+            "description": "Space logistics is thriving! \r\n More smart and brilliant scientists! \r\n\r\n [weapons +6, supplies +2]",
             "resourceChanges": {
                 "weapons": 6,
                 "supplies": 2,
@@ -53,7 +53,7 @@
         {
             "id": "turn_6",
             "title": "Mars News",
-            "description": "Беспрецидентное событие! Хищение и дезертирство! \r\n Часть припасов удалось вернуть. Виновник наказан. \r\n weapons +4\r\n supplies +1\r\n people -1",
+            "description": "An unprecedented incident! Theft and desertion! \r\n Some of the supplies were recovered. The culprit has been punished. \r\n\r\n [weapons +4, supplies +1, people -1]",
             "resourceChanges": {
                 "weapons": 4,
                 "supplies": 1,
@@ -63,7 +63,7 @@
         {
             "id": "turn_7",
             "title": "Mars News",
-            "description": "Люди говорят, что видели странных существ. \r\n При ночном потруле не досчитались охраника. \r\n weapons +3\r\n supplies +2\r\n people -1",
+            "description": "People say they saw strange creatures. \r\n After a night patrol, one guard was missing. \r\n\r\n [weapons +3, supplies +2, people -1]",
             "resourceChanges": {
                 "weapons": 3,
                 "supplies": 2,
@@ -73,7 +73,7 @@
         {
             "id": "turn_8",
             "title": "Mars News",
-            "description": "Логово Bug было обнаружено неподалеку от серверного комплекса. \r\n Боевая группа направлена, потери минимальны. \r\n weapons +2\r\n supplies +3\r\n people -2",
+            "description": "A Bug lair was discovered near the server complex. \r\n A strike team was dispatched; losses are minimal. \r\n\r\n [weapons +2, supplies +3, people -2]",
             "resourceChanges": {
                 "weapons": 2,
                 "supplies": 3,
@@ -83,7 +83,7 @@
         {
             "id": "turn_9",
             "title": "Mars News",
-            "description": "Мы строим укрепления! Спасибо родной земле за припасы! \r\n Летать становится опаснее, но логисты доставляют грузы исправно. \r\n weapons +1\r\n supplies +4\r\n people -3",
+            "description": "We are building fortifications! Thanks to Earth for the supplies! \r\n Flying is becoming more dangerous, but the logistics team delivers cargo reliably. \r\n\r\n [weapons +1, supplies +4, people -3]",
             "resourceChanges": {
                 "weapons": 1,
                 "supplies": 4,
@@ -93,7 +93,7 @@
         {
             "id": "turn_10",
             "title": "Mars News",
-            "description": "Группа Марсиан совершила набег! \r\n Не большие потери, мы справимся! \r\n people -4",
+            "description": "A group of Martians carried out a raid! \r\n Minor losses; we'll manage! \r\n\r\n [people -4]",
             "resourceChanges": {
                 "weapons": 0,
                 "supplies": 0,
@@ -103,7 +103,7 @@
         {
             "id": "turn_11",
             "title": "Mars News",
-            "description": "Летать становится все опаснее. \r\n Число регулярных рейсов сократилось. \r\n weapons +1\r\n supplies +2",
+            "description": "Flying is becoming increasingly dangerous. \r\n The number of regular flights has decreased. \r\n\r\n [weapons +1, supplies +2]",
             "resourceChanges": {
                 "weapons": 1,
                 "supplies": 2,
@@ -113,7 +113,7 @@
         {
             "id": "turn_12",
             "title": "Mars News",
-            "description": "Небо Марса не спокойно.  \r\n Фобос и Деймос смотрят на Вас! \r\n weapons +1\r\n supplies +2",
+            "description": "The Martian sky is restless.  \r\n Phobos and Deimos are watching you! \r\n\r\n [weapons +1, supplies +2]",
             "resourceChanges": {
                 "weapons": 1,
                 "supplies": 2,
@@ -123,7 +123,7 @@
         {
             "id": "turn_13",
             "title": "Mars News",
-            "description": "Пилоты начинаю бастовать и отказываться от исполнения долга. \r\n Линии снабжения ослабли. \r\n weapons +2\r\n supplies +1",
+            "description": "Pilots are starting to strike and refuse to perform their duty. \r\n Supply lines have weakened. \r\n\r\n [weapons +2, supplies +1]",
             "resourceChanges": {
                 "weapons": 2,
                 "supplies": 1,
@@ -133,7 +133,7 @@
         {
             "id": "turn_14",
             "title": "Mars News",
-            "description": "Обнаружены сбои в работе комуникационной сети. \r\n Поставки сократились. \r\n weapons +2\r\n supplies +1",
+            "description": "Disruptions detected in the communication network. \r\n Deliveries have decreased. \r\n\r\n [weapons +2, supplies +1]",
             "resourceChanges": {
                 "weapons": 2,
                 "supplies": 1,
@@ -143,7 +143,7 @@
         {
             "id": "turn_15",
             "title": "Mars News",
-            "description": "Сегодня был сбит первый космический корабыль. \r\n Мы несем потери… Кажется началось… \r\n people -2",
+            "description": "Today, the first spacecraft was shot down. \r\n We are taking losses... It seems it has begun... \r\n\r\n [people -2]",
             "resourceChanges": {
                 "weapons": 0,
                 "supplies": 0,
@@ -153,7 +153,7 @@
         {
             "id": "turn_16",
             "title": "Mars News",
-            "description": "Голод и Стрельба, вот что принес нам новый день! \r\n Повышенные запросы на supplies и weapons. \r\n weapons -2\r\n supplies -3\r\n people -4",
+            "description": "Hunger and gunfire — that's what the new day brought! \r\n Increased demand for supplies and weapons. \r\n\r\n [weapons -2, supplies -3, people -4]",
             "resourceChanges": {
                 "weapons": -2,
                 "supplies": -3,
@@ -163,7 +163,7 @@
         {
             "id": "turn_17",
             "title": "Mars News",
-            "description": "Ожестаченные бои у стен колонии. \r\n Джонни! Они в Летающих тарелках! \r\n weapons -3\r\n supplies -2\r\n people -6",
+            "description": "Fierce fighting at the colony walls. \r\n Johnny! They're in flying saucers! \r\n\r\n [weapons -3, supplies -2, people -6]",
             "resourceChanges": {
                 "weapons": -3,
                 "supplies": -2,
@@ -173,7 +173,7 @@
         {
             "id": "turn_18",
             "title": "Mars News",
-            "description": "Внезапная болезнь начала поражать людей и запасы космического картофеля!!! \r\n Интересно, а Марсианский грунт съедобен? \r\n weapons -4\r\n supplies -4\r\n people -8",
+            "description": "A sudden illness has begun to affect people and the stock of space potatoes!!! \r\n I wonder, is Martian soil edible? \r\n\r\n [weapons -4, supplies -4, people -8]",
             "resourceChanges": {
                 "weapons": -4,
                 "supplies": -4,
@@ -183,7 +183,7 @@
         {
             "id": "turn_19",
             "title": "Mars News",
-            "description": "Колония объята ужасом! \r\n Срочно! Срочно!! СРОЧНО!!! Присылайте нам все!!! \r\n weapons -5\r\n supplies -5\r\n people -10",
+            "description": "The colony is gripped by terror! \r\n Urgent! Urgent!! URGENT!!! Send us everything!!! \r\n\r\n [weapons -5, supplies -5, people -10]",
             "resourceChanges": {
                 "weapons": -5,
                 "supplies": -5,
@@ -193,7 +193,7 @@
         {
             "id": "turn_20",
             "title": "Mars News",
-            "description": "SOS! \r\n Нам срочно нужен Doomguy! \r\n people +1",
+            "description": "SOS! \r\n We urgently need Doomguy! \r\n\r\n [people +1]",
             "resourceChanges": {
                 "weapons": 0,
                 "supplies": 0,
