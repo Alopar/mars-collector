@@ -44,6 +44,7 @@ namespace GameApplication.Gameplay.Managers
         {
             _currentMissionIndex = -1;
             _missionIsActive = false;
+            _missionButtonView.Hide();
         }
 
         public void CheckMissionComplete()
@@ -61,6 +62,17 @@ namespace GameApplication.Gameplay.Managers
             _currentMissionIndex++;
             _missionIsActive = false;
             _missionButtonView.Hide();
+        }
+
+        public bool SecretEnding()
+        {
+            if (_missionIsActive == false) return false;
+            if (!_missionChain.Missions[_currentMissionIndex].CheckRequirements()) return false;
+
+            if (_currentMissionIndex == _missionChain.Missions.Length - 1)
+                return true;
+
+            return false;
         }
 
         public void CheckMissionCanStart()

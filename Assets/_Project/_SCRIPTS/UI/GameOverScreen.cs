@@ -42,13 +42,13 @@ namespace GameApplication.UI
             messageText.gameObject.SetActive(true);
             statsText.gameObject.SetActive(true);
 
-            if (victory && GameFlowManager.Instance.CurrentGameState.CurrentTurn >= GameFlowManager.Instance.Config.TurnsToWin)
-            {
-                ShowVictory();
-            }
-            else if (victory && MissionsManager.Instance.CurrentMissionIndex == 5)
+            if (victory && MissionsManager.Instance.CurrentMissionIndex == 5)
             {
                 ShowSecret();
+            }
+            else if (victory && GameFlowManager.Instance.CurrentGameState.CurrentTurn >= GameFlowManager.Instance.Config.TurnsToWin)
+            {
+                ShowVictory();
             }
 
 
