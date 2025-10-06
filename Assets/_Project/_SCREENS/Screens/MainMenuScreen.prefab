@@ -586,7 +586,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: OPTIONS
+  m_text: SETTINGS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2751bfab0f929354c83bca61770dae81, type: 2}
   m_sharedMaterial: {fileID: -3202783127987383309, guid: 2751bfab0f929354c83bca61770dae81, type: 2}
@@ -702,6 +702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7857f18c3c39f0408e167e9bf59d2e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameApplication.Screens.MainMenuScreen
+  settingsPanel: {fileID: 0}
 --- !u!1 &8126906630754048886
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,4 +862,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4752429422479627456}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3593106824935812929}
+        m_TargetAssemblyTypeName: GameApplication.Screens.MainMenuScreen, Assembly-CSharp
+        m_MethodName: Settings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

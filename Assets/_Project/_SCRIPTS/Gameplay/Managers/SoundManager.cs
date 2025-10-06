@@ -34,21 +34,21 @@ namespace GameApplication.Gameplay.Managers
 
         private void OnEnable()
         {
-            // _musicSlider.onValueChanged.AddListener(OnMusicVolumeChanged);
-            // _soundSlider.onValueChanged.AddListener(OnSoundVolumeChanged);
+            _musicSlider.onValueChanged.AddListener(OnMusicVolumeChanged);
+            _soundSlider.onValueChanged.AddListener(OnSoundVolumeChanged);
         }
 
         private void OnDisable()
         {
-            // _musicSlider.onValueChanged.RemoveListener(OnMusicVolumeChanged);
-            // _soundSlider.onValueChanged.RemoveListener(OnSoundVolumeChanged);
+            _musicSlider.onValueChanged.RemoveListener(OnMusicVolumeChanged);
+            _soundSlider.onValueChanged.RemoveListener(OnSoundVolumeChanged);
         }
 
         private void Start()
         {
-            // _sampleTimer = _sampleDelay + Time.unscaledTime;
-            // _musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 0.25f);
-            // _soundSlider.value = PlayerPrefs.GetFloat("SoundVolume", 0.5f);
+            _sampleTimer = _sampleDelay + Time.unscaledTime;
+            _musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 0.25f);
+            _soundSlider.value = PlayerPrefs.GetFloat("SoundVolume", 0.5f);
         }
 
         private void OnMusicVolumeChanged(float value)
