@@ -21,11 +21,19 @@ MonoBehaviour:
   StartingPeople: 2
   WeaponsPerPersonForMissionsComplete:
   - 1
+  - 1
+  - 0.75
+  - 0.75
   - 0.5
+  - 0.25
   - 0.25
   SuppliesPerPersonForMissionsComplete:
   - 1
+  - 1
+  - 1
+  - 0.75
+  - 0.75
   - 0.5
-  - 0.25
+  - 0.5
   TurnsToWin: 20
   EventsJson: {fileID: 4900000, guid: 7dc5cb6be6edab246a72bfcd18176271, type: 3}

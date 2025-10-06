@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameApplication.Gameplay.Models.Missions.MissionConfig
   MissionName: Mission 1
   MissionDescription: "Attention! We\u2019re looking for suppliers! We promise long-term
-    cooperation and DELICIOUS offers. \\nTask: send ONLY humans to Mars (any quantity)."
+    cooperation and <size=40>DELICIOUS</size> offers. \\nTask: send <size=40>ONLY</size>
+    humans to Mars (any quantity)."
   MissionResult: 
   MinPeopleNeededToStart: 0
   ResourceRequirements:

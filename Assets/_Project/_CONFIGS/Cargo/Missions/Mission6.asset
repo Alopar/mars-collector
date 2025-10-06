@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameApplication.Gameplay.Models.Missions.MissionConfig
   MissionName: Mission 6
   MissionDescription: "We really like your establishment. Perhaps we\u2019ll visit
-    you in person soon. But first, come visit us. As Employee of the Month, you\u2019ve
-    earned a week-long trip to our finest resort! We\u2019re waiting! \\nTask: head
-    to Mars. \\n(Bonus: well-deserved rest)"
+    you in person soon. But first, grab your other half and come visit us! As Employee
+    of the Month, you\u2019ve earned a week-long trip to our finest resort! We\u2019re
+    waiting! \\nTask: head to Mars. \\n<color=#95FF97>(Bonus: well-deserved rest)</color>"
   MissionResult: 
   MinPeopleNeededToStart: 1
   ResourceRequirements:
     ResourceType: 2
-    MinAmount: 1
+    MinAmount: 2

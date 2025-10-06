@@ -15,9 +15,10 @@ MonoBehaviour:
   MissionName: Mission 2
   MissionDescription: "Thank you for your responsiveness. The humans you sent were
     so sweety! Keep up the deliveries and you\u2019ll be rewarded. \\nTask: send
-    ONLY humans to Mars (any quantity). \\n(Bonus: humans require less weaponry)"
+    <size=40>ONLY</size> humans to Mars (4 or more). \\n<color=#95FF97>(Bonus: humans
+    require less weaponry)</color>"
   MissionResult: 
-  MinPeopleNeededToStart: 2
+  MinPeopleNeededToStart: 5
   ResourceRequirements:
     ResourceType: 2
-    MinAmount: 1
+    MinAmount: 4

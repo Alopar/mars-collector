@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameApplication.Gameplay.Models.Missions.MissionConfig
   MissionName: Mission 5
   MissionDescription: "We always knew Earthlings were good, but this good\u2026?
-    Three more Kinder Surprises, please. \\nTask: send ONLY humans to Mars (3 or
-    more). \\n(Bonus: humans require less weaponry and food)"
+    Four more Kinder Surprises, please. \\nTask: send <size=40>ONLY</size> humans
+    to Mars (4 or more). \\n<color=#95FF97>(Bonus: humans require less weaponry and
+    food)</color>"
   MissionResult: 
-  MinPeopleNeededToStart: 4
+  MinPeopleNeededToStart: 20
   ResourceRequirements:
     ResourceType: 2
-    MinAmount: 3
+    MinAmount: 4

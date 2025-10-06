@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Mission4
   m_EditorClassIdentifier: Assembly-CSharp::GameApplication.Gameplay.Models.Missions.MissionConfig
   MissionName: Mission 4
-  MissionDescription: "URGENT! The last delivery amazed us. We need more immediately.
-    Let\u2019s speed up the pace! \\nTask: send ONLY humans to Mars (2 or more).
-    \\n(Bonus: humans require less weaponry and food)"
+  MissionDescription: "<size=40>URGENT!</size> The last delivery amazed us. We need
+    more immediately. Let\u2019s speed up the pace! \\nTask: send <size=40>ONLY</size>
+    humans to Mars (2 or more). \\n<color=#95FF97>(Bonus: humans require less weaponry)</color>"
   MissionResult: 
-  MinPeopleNeededToStart: 3
+  MinPeopleNeededToStart: 15
   ResourceRequirements:
     ResourceType: 2
     MinAmount: 2

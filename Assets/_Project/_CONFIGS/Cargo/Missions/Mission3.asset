@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameApplication.Gameplay.Models.Missions.MissionConfig
   MissionName: Mission 3
   MissionDescription: 'Hot order: a married couple is needed to develop a meat farm.
-    Children and pets are welcome. \nTask: send ONLY humans to Mars (2 or more).
-    \n(Bonus: humans require less weaponry and food)'
+    Children and pets are welcome. \nTask: send <size=40>ONLY</size> humans to Mars
+    (2 or more). \n<color=#95FF97>(Bonus: humans require less food)</color>'
   MissionResult: 
-  MinPeopleNeededToStart: 3
+  MinPeopleNeededToStart: 9
   ResourceRequirements:
     ResourceType: 2
     MinAmount: 2
