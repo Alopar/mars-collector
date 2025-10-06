@@ -3,6 +3,7 @@ using GameApplication.Utility;
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Playables;
 
 namespace GameApplication.Gameplay.Managers
 {
@@ -22,6 +23,7 @@ namespace GameApplication.Gameplay.Managers
 
         [Header("Settings")]
         public float ShipTravelDuration = 2f;
+        public PlayableDirector ShipTravelDirector;
 
         private void Awake()
         {
@@ -107,10 +109,11 @@ namespace GameApplication.Gameplay.Managers
 
         private IEnumerator ProcessTurnSequence(ShipCargo cargo)
         {
+            ShipTravelDirector.Play();
+            yield return new WaitForSeconds(ShipTravelDuration);
+
             SetPhase(GamePhase.Traveling);
             MarsManager.Instance.ClearPreview();
-
-            yield return new WaitForSeconds(ShipTravelDuration);
 
             SetPhase(GamePhase.Processing);
 
@@ -120,14 +123,7 @@ namespace GameApplication.Gameplay.Managers
             TurnEvent currentEvent = EventManager.Instance.GetNextEvent();
             if (currentEvent != null)
             {
-                Debug.Log($"Применяется событие: {currentEvent.title}");
                 var eventChanges = currentEvent.GetResourceChanges();
-                
-                foreach (var change in eventChanges)
-                {
-                    Debug.Log($"  {change.Key}: {change.Value}");
-                }
-                
                 MarsManager.Instance.ApplyChangesSilent(eventChanges);
             }
             else
@@ -138,7 +134,9 @@ namespace GameApplication.Gameplay.Managers
             MarsManager.Instance.NotifyStateChanged();
             CurrentGameState.AddShipSent();
 
-            yield return new WaitForSeconds(0.5f);
+            ShipTravelDirector.time = 0;
+            ShipTravelDirector.Evaluate();
+            ShipTravelDirector.Stop();
 
             if (!CurrentGameState.IsGameOver)
             {
@@ -147,7 +145,7 @@ namespace GameApplication.Gameplay.Managers
 
                 if (CurrentGameState.CheckVictory())
                 {
-                    EndGame(true, $"Победа! Вы продержались {Config.TurnsToWin} ходов!");
+                    EndGame(true, $"Win! You've lasted {Config.TurnsToWin} turns!");
                     yield break;
                 }
 
@@ -173,10 +171,6 @@ namespace GameApplication.Gameplay.Managers
             if (currentEvent != null)
             {
                 var preview = currentEvent.GetResourceChanges();
-                int w = preview.ContainsKey(ResourceType.Weapons) ? preview[ResourceType.Weapons] : 0;
-                int s = preview.ContainsKey(ResourceType.Supplies) ? preview[ResourceType.Supplies] : 0;
-                int p = preview.ContainsKey(ResourceType.People) ? preview[ResourceType.People] : 0;
-                Debug.Log($"ShowNextTurnPreview: Event={currentEvent.title}, Changes: W:{w} S:{s} P:{p}");
                 MarsManager.Instance.SetPreview(preview);
             }
             else
