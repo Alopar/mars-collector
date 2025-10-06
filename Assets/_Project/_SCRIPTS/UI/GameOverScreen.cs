@@ -56,13 +56,13 @@ namespace GameApplication.UI
             if (messageText != null)
             {
                 messageText.text = message;
-                messageText.color = victory ? victoryColor : defeatColor;
+                // messageText.color = victory ? victoryColor : defeatColor;
             }
 
             if (statsText != null)
             {
                 var gameState = GameFlowManager.Instance.CurrentGameState;
-                statsText.text = $"Statystics:\n" +
+                statsText.text = $"STATISTICS\n" +
                                 $"Turns survived: {gameState.CurrentTurn}\n" +
                                 $"Ships dispatched: {gameState.ShipsSent}";
             }
