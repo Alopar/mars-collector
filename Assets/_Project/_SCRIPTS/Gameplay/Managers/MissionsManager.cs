@@ -44,6 +44,7 @@ namespace GameApplication.Gameplay.Managers
         {
             _currentMissionIndex = -1;
             _missionIsActive = false;
+            _missionButtonView.Hide();
         }
 
         public void CheckMissionComplete()
