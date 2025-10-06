@@ -64,6 +64,7 @@ namespace GameApplication.Gameplay.Managers
 
             _missionIsActive = true;
             _missionButtonView.Show();
+            _missionButtonView.SetNew();
             _missionButtonView.SetMissionText(_missionChain.Missions[_currentMissionIndex].MissionName);
             _missionDescriptionView.SetMissionText(_missionChain.Missions[_currentMissionIndex].MissionDescription);
         }
@@ -86,6 +87,7 @@ namespace GameApplication.Gameplay.Managers
             _missionIsActive = false;
             _currentMissionIndex = 0;
             _missionButtonView.Show();
+            _missionButtonView.SetNew();
             _missionButtonView.SetMissionText(_missionChain.Missions[_currentMissionIndex].MissionName);
             _missionDescriptionView.SetMissionText(_missionChain.Missions[_currentMissionIndex].MissionDescription);
         }

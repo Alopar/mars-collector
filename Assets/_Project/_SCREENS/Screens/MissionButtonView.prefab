@@ -303,8 +303,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameApplication.UI.MissionButtonView
   _button: {fileID: 4383398020255928927}
+  _mainImage: {fileID: 4857539899594771842}
   _missionText: {fileID: 7694355894881312768}
   _missionDescriptionView: {fileID: 0}
+  _newColor: {r: 0.6784314, g: 1, b: 0.5803922, a: 1}
+  _inactiveColor: {r: 1, g: 1, b: 1, a: 0.14901961}
 --- !u!1 &3588054627810403255
 GameObject:
   m_ObjectHideFlags: 0
