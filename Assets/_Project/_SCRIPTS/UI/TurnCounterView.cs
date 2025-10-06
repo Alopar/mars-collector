@@ -23,7 +23,7 @@ namespace GameApplication.UI
             if (turnText != null && GameFlowManager.Instance != null && GameFlowManager.Instance.CurrentGameState != null)
             {
                 int totalTurns = GameFlowManager.Instance.CurrentGameState.TurnsToWin;
-                turnText.text = $"Ход {currentTurn} из {totalTurns}";
+                turnText.text = $"{currentTurn}/{totalTurns}";
             }
         }
 
