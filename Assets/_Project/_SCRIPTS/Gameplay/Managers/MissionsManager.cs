@@ -37,6 +37,13 @@ namespace GameApplication.Gameplay.Managers
 
             CargoManager.Instance.OnResourcesChanged += HandleResourcesChanged;
             GameFlowManager.Instance.OnTurnChanged += OnTurnChanged;
+            GameFlowManager.Instance.OnGameEnded += GameEnded;
+        }
+
+        private void GameEnded(bool _, string __)
+        {
+            _currentMissionIndex = -1;
+            _missionIsActive = false;
         }
 
         public void CheckMissionComplete()
@@ -64,6 +71,7 @@ namespace GameApplication.Gameplay.Managers
 
             _missionIsActive = true;
             _missionButtonView.Show();
+            _missionButtonView.SetNew();
             _missionButtonView.SetMissionText(_missionChain.Missions[_currentMissionIndex].MissionName);
             _missionDescriptionView.SetMissionText(_missionChain.Missions[_currentMissionIndex].MissionDescription);
         }
@@ -86,6 +94,7 @@ namespace GameApplication.Gameplay.Managers
             _missionIsActive = false;
             _currentMissionIndex = 0;
             _missionButtonView.Show();
+            _missionButtonView.SetNew();
             _missionButtonView.SetMissionText(_missionChain.Missions[_currentMissionIndex].MissionName);
             _missionDescriptionView.SetMissionText(_missionChain.Missions[_currentMissionIndex].MissionDescription);
         }
