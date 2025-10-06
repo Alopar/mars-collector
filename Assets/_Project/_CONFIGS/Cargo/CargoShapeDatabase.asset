@@ -20,8 +20,8 @@ MonoBehaviour:
   supplyShapes:
   - {fileID: 11400000, guid: ac733667c9f3efa47af792a4d6cc33f2, type: 2}
   - {fileID: 11400000, guid: 28eab6239581de847a8ec015251fc8d2, type: 2}
-  - {fileID: 11400000, guid: a0abfc23f3eead94484cfc855c074c83, type: 2}
   - {fileID: 11400000, guid: 21673f5eb30672146bb33e54a4f3a934, type: 2}
+  - {fileID: 11400000, guid: a0abfc23f3eead94484cfc855c074c83, type: 2}
   peopleShapes:
   - {fileID: 11400000, guid: 2d5e2564ee22a5a449f4bfc634b9ef50, type: 2}
   - {fileID: 11400000, guid: e1ebc4b7a56bff04b9d61b0aaec663ce, type: 2}

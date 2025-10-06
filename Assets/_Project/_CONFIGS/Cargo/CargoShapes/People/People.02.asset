@@ -15,8 +15,8 @@ MonoBehaviour:
   shapeName: People.02
   resourceType: 2
   icon: {fileID: 21300000, guid: a005c559e0a062b4dadf16f58ab31e75, type: 3}
-  shapeWidth: 1
+  shapeWidth: 2
   shapeHeight: 2
-  shapeFlat: 0100000001000000
+  shapeFlat: 00000000010000000100000000000000
   resourceAmount: 2
   previewColor: {r: 0, g: 1, b: 0, a: 0.3}
