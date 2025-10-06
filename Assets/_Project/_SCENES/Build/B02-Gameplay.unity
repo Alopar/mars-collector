@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AlphaLayerView
       objectReference: {fileID: 0}
+    - target: {fileID: 6175141228902438558, guid: b88b04cd81139fc45bd654f2acd7053c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9194950871867898417, guid: b88b04cd81139fc45bd654f2acd7053c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
