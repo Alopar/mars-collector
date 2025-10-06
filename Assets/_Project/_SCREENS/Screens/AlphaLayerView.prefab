@@ -297,7 +297,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3622256638896427891}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6163248902947555982}
+        m_TargetAssemblyTypeName: GameApplication.Screens.AlphaScreen, Assembly-CSharp
+        m_MethodName: ShowSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3469347768043448360
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,6 +862,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9194950871867898417}
+  - component: {fileID: 6163248902947555982}
   m_Layer: 0
   m_Name: AlphaLayerView
   m_TagString: Untagged
@@ -873,6 +886,18 @@ Transform:
   - {fileID: 766088229259811192}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6163248902947555982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6175141228902438558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43ad34753cd08ba4282592873b74d62b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameApplication.Screens.AlphaScreen
 --- !u!1 &8126906630754048886
 GameObject:
   m_ObjectHideFlags: 0
